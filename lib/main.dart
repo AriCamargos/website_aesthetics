@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web/views/home/home_page.dart';
+import 'package:web/home_screen.dart';
+import 'package:web/views/home/section_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const HomePage(),
+      home: const HomeScreen(),
       
     );
   }
