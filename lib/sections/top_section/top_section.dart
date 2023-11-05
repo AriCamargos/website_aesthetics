@@ -4,6 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:web/constants.dart';
+import 'package:web/constants.dart';
+
+import '../components/glass_content.dart';
+import '../components/logo_and_blur_box.dart';
+import '../components/menu.dart';
+import '../components/person_pic.dart';
 
 class TopSection extends StatelessWidget {
   const TopSection({super.key});
@@ -23,11 +29,19 @@ class TopSection extends StatelessWidget {
       ),
       child: Container(
         margin: const EdgeInsets.only(top: kDefaultPadding),
-        width: 1200,
+        width: 1000,
         child: Stack(
           children: [
-            Image.asset('assets/images/background_top.jpg'),
-            GlassContente(size: size)
+            LogoAndBlurBox(size: size),
+            const Positioned(
+              bottom: 0,
+              right: 0,
+              child: PersonPic(),
+            ),
+            const Positioned(
+              bottom: 0,
+              child: Menu(),
+            ),
           ],
         ),
       ),
@@ -35,35 +49,3 @@ class TopSection extends StatelessWidget {
   }
 }
 
-class GlassContente extends StatelessWidget {
-  const GlassContente({
-    super.key,
-    required this.size,
-  });
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Container(
-          constraints:
-              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
-          width: double.infinity,
-          color: Colors.white.withOpacity(0),
-          child: Column(
-            children: [
-              Text(
-                'Hello There!',
-                style: Theme.of(context).textTheme.headlineLarge.copyWith(color: Colors.white),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
