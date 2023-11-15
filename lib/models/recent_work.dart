@@ -14,21 +14,23 @@ class RecentWork {
 
 List<RecentWork> recentWork = [
   RecentWork(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
-    category: 'Graphic Design',
-    image: 'assets/images/work_1.png'
-  ),
-   RecentWork(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
-    category: 'Graphic Design',
-    image: 'assets/images/work_1.png'
-  ),
-   RecentWork(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
-    category: 'Graphic Design',
-    image: 'assets/images/work_1.png'
-  ),
+      title: 'New and Fresh Protifolio ineed at the end',
+      id: 1,
+      category: 'Graphic Design',
+      image: '/images/work_1.png'),
+  RecentWork(
+      title: 'New and Fresh Protifolio ineed at the end',
+      id: 1,
+      category: 'Graphic Design',
+      image: '/images/work_2.png'),
+  RecentWork(
+      title: 'New and Fresh Protifolio ineed at the end',
+      id: 1,
+      category: 'Graphic Design',
+      image: '/images/work_3.png'),
+  RecentWork(
+      title: 'New and Fresh Protifolio ineed at the end',
+      id: 1,
+      category: 'Graphic Design',
+      image: '/images/work_4.png'),
 ];
