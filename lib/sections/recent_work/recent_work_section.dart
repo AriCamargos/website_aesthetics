@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:web/components/section_title.dart';
 import 'package:web/models/recent_work.dart';
-
 import '../../components/hireme_card.dart';
 import '../../constants.dart';
 import 'components/recent_work_card.dart';
 
-class RecentWorkSection extends StatefulWidget {
+class RecentWorkSection extends StatelessWidget {
   const RecentWorkSection({super.key});
 
-  @override
-  State<RecentWorkSection> createState() => _RecentWorkSectionState();
-}
-
-class _RecentWorkSectionState extends State<RecentWorkSection> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,7 +32,9 @@ class _RecentWorkSectionState extends State<RecentWorkSection> {
             subtitle: 'Meus pontos fortes',
             color: Color(0xFFFFB100),
           ),
-          const SizedBox(height: kDefaultPadding * 1.5,),
+          const SizedBox(
+            height: kDefaultPadding * 1.5,
+          ),
           SizedBox(
             width: 1110,
             child: Wrap(
@@ -46,7 +42,10 @@ class _RecentWorkSectionState extends State<RecentWorkSection> {
               runSpacing: kDefaultPadding,
               children: List.generate(
                 recentWork.length,
-                (index) => RecentWorkCard(index: index),
+                (index) => RecentWorkCard(
+                  index: index,
+                  press: () {},
+                ),
               ),
             ),
           ),
@@ -58,4 +57,3 @@ class _RecentWorkSectionState extends State<RecentWorkSection> {
     );
   }
 }
-
