@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:web/constants.dart';
 import 'package:web/home_screen.dart';
-import 'package:web/views/home/section_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        inputDecorationTheme: kDefaultInputDecorationTheme,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         primarySwatch: Colors.orange,
       ),
       home: const HomeScreen(),
