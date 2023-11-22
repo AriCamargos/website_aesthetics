@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 
@@ -20,7 +18,7 @@ class TopSection extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('assets/images/background.jpg'),
+          image: AssetImage('/images/rose_gold.jpg'),
         ),
       ),
       child: Container(

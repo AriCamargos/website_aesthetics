@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-const kTextColor =  Color(0xff707070);
+
+const kTextColor = Color(0xff707070);
 const kTextLightColor = Color(0xFF555555);
 
 const kDefaultPadding = 20.0;
@@ -16,15 +17,16 @@ final kDefaultCardShadow = BoxShadow(
   color: Colors.black.withOpacity(0.1),
 );
 
-// TextField dedign
-const kDefaultInputDecorationTheme = InputDecorationTheme(
+// TextField design
+final kDefaultInputDecorationTheme = InputDecorationTheme(
   border: kDefaultOutlineInputBorder,
   enabledBorder: kDefaultOutlineInputBorder,
   focusedBorder: kDefaultOutlineInputBorder,
 );
 
-const kDefaultOutlineInputBorder =  OutlineInputBorder(
-  borderSide: BorderSide(
+final kDefaultOutlineInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.circular(50),
+  borderSide: const BorderSide(
     color: Color(0xFFCEE4FD),
   ),
 );
