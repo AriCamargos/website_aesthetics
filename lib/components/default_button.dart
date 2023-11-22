@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+
 class DefaultButton extends StatelessWidget {
   final String text, image;
   final Function press;
   const DefaultButton({
-    super.key, required this.text, required this.image, required this.press,
+    super.key,
+    required this.text,
+    required this.image,
+    required this.press,
   });
 
   @override
