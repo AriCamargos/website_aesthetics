@@ -1,12 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:web/constants.dart';
 import 'package:web/constants.dart';
 
-import '../components/glass_content.dart';
 import '../components/logo_and_blur_box.dart';
 import '../components/menu.dart';
 import '../components/person_pic.dart';
@@ -24,12 +18,12 @@ class TopSection extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('assets/images/background_top.jpg'),
+          image: AssetImage('/images/rose_gold.jpg'),
         ),
       ),
       child: Container(
         margin: const EdgeInsets.only(top: kDefaultPadding),
-        width: 1000,
+        width: 1200,
         child: Stack(
           children: [
             LogoAndBlurBox(size: size),

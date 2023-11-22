@@ -1,40 +1,37 @@
 import 'package:flutter/material.dart';
+
 class Service {
-  String? image;
-  Color? color;
-  String? title;
-  int id;
-  Service({
-    this.image,
-    this.color,
-    this.title,
-    required this.id,
-  });
+  final int id;
+  final String title, image;
+  final Color color;
+
+  Service({required this.id, required this.title, required this.image, required this.color});
 }
 
+// For demo list of service
 List<Service> services = [
   Service(
-    title: 'New and Fresh Protifolio ineed at the end',
     id: 1,
+    title: "Graphic Design",
+    image: "/images/graphic.png",
     color: const Color(0xFFD9FFFC),
-    image: 'assets/images/work_1.png'
   ),
-   Service(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
+  Service(
+    id: 2,
+    title: "Web Design",
+    image: "/images/desktop.png",
     color: const Color(0xFFE4FFC7),
-    image: 'assets/images/work_1.png'
   ),
-   Service(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
+  Service(
+    id: 3,
+    title: "UI Design",
+    image: "/images/ui.png",
     color: const Color(0xFFFFF3DD),
-    image: 'assets/images/work_1.png'
   ),
-   Service(
-    title: 'New and Fresh Protifolio ineed at the end',
-    id: 1,
+  Service(
+    id: 4,
+    title: "Interaction Design",
+    image: "/images/Intreaction_design.png",
     color: const Color(0xFFFFE0E0),
-    image: 'assets/images/work_1.png'
   ),
 ];
