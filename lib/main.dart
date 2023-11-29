@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 import 'package:web/home_screen.dart';
+import 'package:web/sections/about/about_section.dart';
+import 'package:web/sections/services/service_section.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: const HomeScreen(),
-      
+      routes: {
+        '/about': (context) => const AboutSection(),
+        '/sevice': (context) => const ServiceSection(),
+      },
     );
   }
 }

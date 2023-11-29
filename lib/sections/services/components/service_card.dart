@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:web/sections/about/about_section.dart';
 
 import '../../../constants.dart';
 import '../../../models/service.dart';
+
 class ServiceCard extends StatefulWidget {
   final int index;
   const ServiceCard({
-    super.key, required this.index,
+    super.key,
+    required this.index,
   });
 
   @override
@@ -18,7 +21,12 @@ class _ServiceCardState extends State<ServiceCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      /*onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const AboutSection(),
+        ),
+      ),*/
       onHover: (value) {
         setState(() {
           isHover = value;
@@ -26,11 +34,10 @@ class _ServiceCardState extends State<ServiceCard> {
       },
       hoverColor: Colors.transparent,
       child: AnimatedContainer(
-      duration: duration,
-        margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+        duration: duration,
         constraints: const BoxConstraints(maxWidth: 1110),
         height: 256,
-        width: 256,
+        width: 240,
         decoration: BoxDecoration(
             color: services[widget.index].color,
             borderRadius: BorderRadius.circular(10),
@@ -65,7 +72,7 @@ class _ServiceCardState extends State<ServiceCard> {
             Text(
               services[widget.index].title,
               style: const TextStyle(fontSize: 22),
-            )
+            ),
           ],
         ),
       ),

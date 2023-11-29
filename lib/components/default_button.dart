@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class DefaultButton extends StatelessWidget {
-  final String text, image;
+  final String? image;
+  final String text;
   final Function press;
   const DefaultButton({
     super.key,
     required this.text,
-    required this.image,
+     this.image,
     required this.press,
   });
 
@@ -29,7 +30,7 @@ class DefaultButton extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            image,
+            image!,
             height: 40,
           ),
           const SizedBox(

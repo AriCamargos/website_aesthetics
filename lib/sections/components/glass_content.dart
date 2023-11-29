@@ -28,19 +28,19 @@ class GlassContente extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Hello There!',
-                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                      color: Colors.white,
-                    ),
-              ),
               const Text(
-                'Robbie',
+                'Dra. Raissa Campos',
                 style: TextStyle(
-                    fontSize: 100,
+                    fontSize: 80,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     height: 1.5),
+              ),
+              Text(
+                'Especialista em Harmonização Orofacial',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.white,
+                    ),
               ),
               Text(
                 'Creativite Design',

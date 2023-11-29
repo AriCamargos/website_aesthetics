@@ -13,7 +13,7 @@ class AboutTextWithSign extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'About my story',
+          'A Dra',
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
@@ -22,7 +22,7 @@ class AboutTextWithSign extends StatelessWidget {
         const SizedBox(
           height: kDefaultPadding * 2,
         ),
-        Image.asset('/images/sign.png'),
+        //Image.asset('/images/sign.png'),
       ],
     );
   }

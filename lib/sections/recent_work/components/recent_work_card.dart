@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web/sections/about/about_section.dart';
 
 import '../../../constants.dart';
 import '../../../models/recent_work.dart';
@@ -8,7 +9,8 @@ class RecentWorkCard extends StatefulWidget {
   final Function() press;
   const RecentWorkCard({
     super.key,
-    required this.index, required this.press,
+    required this.index,
+    required this.press,
   });
 
   @override
@@ -22,13 +24,13 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
     bool isHover = false;
     List<BoxShadow> boxShadow = [];
 
-    if(isHover){
+    if (isHover) {
       boxShadow = [kDefaultCardShadow];
     }
 
     return InkWell(
       onTap: widget.press,
-      onHover: (value){
+      onHover: (value) {
         setState(() {
           isHover = value;
         });
@@ -39,7 +41,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow:  boxShadow ,
+          boxShadow: boxShadow,
         ),
         duration: duration,
         child: Row(
@@ -47,12 +49,13 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
             Image.asset(recentWork[widget.index].image!),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(recentWork[widget.index].title!),
+                    // Text(recentWork[widget.index].title!),
                     const SizedBox(
                       height: kDefaultPadding / 2,
                     ),
@@ -66,9 +69,12 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                     const SizedBox(
                       height: kDefaultPadding,
                     ),
-                    const Text(
-                      'Ver Detalhes',
-                      style: TextStyle(decoration: TextDecoration.underline),
+                    GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutSection(),)),
+                      child: const Text(
+                        'Ver Detalhes',
+                        style: TextStyle(decoration: TextDecoration.underline),
+                      ),
                     ),
                   ],
                 ),

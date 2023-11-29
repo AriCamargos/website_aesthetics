@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web/components/default_button.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/service.dart';
 import '../../components/section_title.dart';
@@ -15,9 +16,9 @@ class ServiceSection extends StatelessWidget {
       child: Column(
         children: [
           const SectionTitle(
-            title: 'Serviços oferecidos',
-            subtitle: 'Pontos Fortes ',
-            color: Color(0xFFFF0000),
+            title: 'Preenchimento',
+            subtitle: 'Procedimentos',
+            color: Color.fromARGB(210, 246, 176, 250),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,6 +26,19 @@ class ServiceSection extends StatelessWidget {
               services.length,
               (index) => ServiceCard(index: index),
             ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              DefaultButton(
+                text: 'Saiba mais',
+                image: '/images/contact_icon.png',
+                press: () {},
+              )
+            ],
           )
         ],
       ),

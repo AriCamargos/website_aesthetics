@@ -10,49 +10,51 @@ class RecentWorkSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: kDefaultPadding * 6),
-      width: double.infinity,
-      //height: 600,
-      decoration: BoxDecoration(
-        color: const Color(0xFFF7E8FF).withOpacity(0.3),
-        image: const DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage('images/recent_work_bg.png'),
+    return GestureDetector(
+      child: Container(
+        margin: const EdgeInsets.only(top: kDefaultPadding * 6),
+        width: double.infinity,
+        //height: 600,
+        decoration: BoxDecoration(
+          color: const Color(0xFFF7E8FF).withOpacity(0.3),
+          image: const DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('images/recent_work_bg.png'),
+          ),
         ),
-      ),
-      child: Column(
-        children: [
-          Transform.translate(
-            offset: const Offset(0, -80),
-            child: const HireMeCard(),
-          ),
-          const SectionTitle(
-            title: 'Trabalhos Recentes',
-            subtitle: 'Meus pontos fortes',
-            color: Color(0xFFFFB100),
-          ),
-          const SizedBox(
-            height: kDefaultPadding * 1.5,
-          ),
-          SizedBox(
-            width: 1110,
-            child: Wrap(
-              spacing: kDefaultPadding,
-              runSpacing: kDefaultPadding,
-              children: List.generate(
-                recentWork.length,
-                (index) => RecentWorkCard(
-                  index: index,
-                  press: () {},
+        child: Column(
+          children: [
+            Transform.translate(
+              offset: const Offset(0, -80),
+              child: const HireMeCard(),
+            ),
+            const SectionTitle(
+              title: 'Procedimentos',
+              subtitle: 'Meus pontos fortes',
+              color: Color(0xFFFFB100),
+            ),
+            const SizedBox(
+              height: kDefaultPadding * 1.5,
+            ),
+            SizedBox(
+              width: 1110,
+              child: Wrap(
+                spacing: kDefaultPadding,
+                runSpacing: kDefaultPadding,
+                children: List.generate(
+                  recentWork.length,
+                  (index) => RecentWorkCard(
+                    index: index,
+                    press: () {},
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: kDefaultPadding * 5,
-          )
-        ],
+            const SizedBox(
+              height: kDefaultPadding * 5,
+            )
+          ],
+        ),
       ),
     );
   }
