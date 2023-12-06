@@ -36,10 +36,11 @@ class HireMeCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const[
+
                 Text(
-                  'Quer iniciar um novo procedimento?',
+                  'Pele lisinha o ano inteiro',
                   style: TextStyle(
-                    fontSize: 42,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -55,7 +56,7 @@ class HireMeCard extends StatelessWidget {
           ),
           DefaultButton(
             image: 'images/hand.png',
-            text: 'Contate-me!',
+            text: 'Saiba mais',
             press: () {},
           ),
         ],
