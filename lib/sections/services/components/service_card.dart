@@ -38,10 +38,10 @@ class _ServiceCardState extends State<ServiceCard> {
         constraints: const BoxConstraints(maxWidth: 1110),
         height: 256,
         width: 240,
-        decoration: BoxDecoration(
+        /*decoration: BoxDecoration(
             color: services[widget.index].color,
             borderRadius: BorderRadius.circular(10),
-            boxShadow: [if (isHover) kDefaultCardShadow]),
+            boxShadow: [if (isHover) kDefaultCardShadow]),*/
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -72,6 +72,13 @@ class _ServiceCardState extends State<ServiceCard> {
             Text(
               services[widget.index].title,
               style: const TextStyle(fontSize: 22),
+            ),
+            Center(
+              
+              child: Text(
+                services[widget.index].subtitle,
+                style: const TextStyle(fontSize: 15, wordSpacing: 2 ),
+              ),
             ),
           ],
         ),

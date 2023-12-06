@@ -8,9 +8,11 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.popAndPushNamed(context, '/about'),
-      child: Container(
+    return 
+    //GestureDetector(
+      //onTap: () => Navigator.popAndPushNamed(context, '/about'),
+    //  child: 
+      Container(
         margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
         constraints: const BoxConstraints(maxWidth: 1110),
         child: Column(
@@ -19,7 +21,7 @@ class AboutSection extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 28.0),
               child: Text(
-                'Sobre mim',
+                'image',
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -36,14 +38,15 @@ class AboutSection extends StatelessWidget {
                     children: const [
                       // AboutTextWithSign(),
                       Expanded(
-                        child: AboutSectionText(
-                            text:
-                                'Graduada em Odontologia pela FMU 2018 \nEspecialista em saúde pública pela Anhembi Morumbi 2020 \nEspecialista em Harmonização Orofacial pelo IBOP 2023'),
-                      ),
-                      VerticalDivider(
-                        color: Color(0xFF9bc9c7),
-                        thickness: 10.0,
-                      ),
+                          child: AboutSectionText(
+                        text:
+                            '''Dra Raissa Campos é cirugiã dentista especilista em saúde pública e procedimentos estéticos.'''
+                            ''' \n \nAplicando as mais modernas tecnologias em suas técnicas faciais, além de todo o conforto e atendimento individualizado para as  suas necessidades.'''
+                            '''\nGraduada em Odontologia pela FMU'''
+                            '''\nEspecialista em saúde pública pela Anhembi Morumbi \n'''
+                            '''\nEspecialista em Harmonização Orofacial pelo IBOP''',
+                      )),
+
                       //ExperienceCard(),
                       Expanded(
                         child: AboutSectionText(
@@ -76,7 +79,7 @@ class AboutSection extends StatelessWidget {
             ),
           ],
         ),
-      ),
+     // ),
     );
   }
 }

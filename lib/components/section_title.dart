@@ -18,8 +18,10 @@ class SectionTitle extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
       constraints: const BoxConstraints(maxWidth: 1110),
       height: 100,
-      child: Row(children: [
-        Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+        /*Container(
           margin: const EdgeInsets.only(right: kDefaultPadding),
           padding: const EdgeInsets.only(bottom: 72),
           width: 8,
@@ -30,24 +32,24 @@ class SectionTitle extends StatelessWidget {
               color: color,
             ),
           ),
-        ),
+        ),*/
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              subtitle,
-              style: const TextStyle(
-                fontWeight: FontWeight.w200,
-                color: kTextColor,
-              ),
-            ),
             Text(
               title,
               style: Theme.of(context)
                   .textTheme
                   .headlineLarge!
                   .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+            ),
+            Text(
+              subtitle,
+              style: const TextStyle(
+                fontWeight: FontWeight.w200,
+                color: kTextColor,
+              ),
             ),
           ],
         )

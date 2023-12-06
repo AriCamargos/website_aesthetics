@@ -16,8 +16,9 @@ class ServiceSection extends StatelessWidget {
       child: Column(
         children: [
           const SectionTitle(
-            title: 'Preenchimento',
-            subtitle: 'Procedimentos',
+            title: 'Benefícios dos tratamentos',
+            subtitle: '''Resgate sua jovialidade com'''
+                '''uma aparência rejuvenescida que reflete sua verdadeira essência''',
             color: Color.fromARGB(210, 246, 176, 250),
           ),
           Row(
@@ -34,7 +35,7 @@ class ServiceSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DefaultButton(
-                text: 'Saiba mais',
+                text: 'Atendimento Online',
                 image: '/images/contact_icon.png',
                 press: () {},
               )
