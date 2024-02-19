@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'glass_content.dart';
-
 class LogoAndBlurBox extends StatelessWidget {
   const LogoAndBlurBox({
     super.key,
@@ -20,7 +17,7 @@ class LogoAndBlurBox extends StatelessWidget {
           color: Colors.black,
         ),
         const Spacer(),
-        GlassContente(size: size),
+        //GlassContente(size: size),
         const Spacer(flex: 3),
       ],
     );

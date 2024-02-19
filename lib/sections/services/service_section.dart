@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web/components/default_button.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/service.dart';
-import '../../components/section_title.dart';
+import 'package:web/sections/about/components/about_section_text.dart';
 import 'components/service_card.dart';
 
 class ServiceSection extends StatelessWidget {
@@ -15,11 +15,10 @@ class ServiceSection extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          const SectionTitle(
+          const TitleAndSubtitle(
             title: 'Benefícios dos tratamentos',
             subtitle: '''Resgate sua jovialidade com'''
                 '''uma aparência rejuvenescida que reflete sua verdadeira essência''',
-            color: Color.fromARGB(210, 246, 176, 250),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

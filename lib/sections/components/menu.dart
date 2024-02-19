@@ -22,9 +22,12 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
+      //espaço dentro do menu
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      //epaço fora do menu
       constraints: const BoxConstraints(maxWidth: 1110),
-      height: 100,
+      height: 50,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: const BorderRadius.only(
@@ -33,11 +36,14 @@ class _MenuState extends State<Menu> {
         ),
         boxShadow: [kDefaultShadow],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(
-          menuItens.length,
-          (index) => buildMenuItem(index),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 100.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: List.generate(
+            menuItens.length,
+            (index) => buildMenuItem(index),
+          ),
         ),
       ),
     );
@@ -70,13 +76,6 @@ class _MenuState extends State<Menu> {
                 right: 0,
                 bottom:
                     selectedIndex != index && hoverIndex == index ? -2 : -32,
-                duration: const Duration(milliseconds: 200),
-                child: Image.asset('/images/hover.png'),
-              ),
-              AnimatedPositioned(
-                left: 0,
-                right: 0,
-                bottom: selectedIndex == index ? -2 : -32,
                 duration: const Duration(milliseconds: 200),
                 child: Image.asset('/images/hover.png'),
               ),

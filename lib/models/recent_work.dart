@@ -14,19 +14,19 @@ class RecentWork {
 
 List<RecentWork> recentWork = [
   RecentWork(
-      title: 'Preenchimentos',
+      title: 'Tratamentos para Flacidez Facial',
       id: 1,
-      category: 'Graphic Design',
+      category: 'Liberte-se das marcas do tempo recuperando sua beleza e jovialidade com uma pele mais firme e radiante.',
       image: '/images/work_1.png'),
   RecentWork(
-      title: 'Toxina Botulínica',
+      title: 'Rejuvenescimento Profundo das Olheiras',
       id: 1,
-      category: 'Graphic Design',
+      category: 'Olhos radiantes e sem marcas com o rejuvenescimento de olheiras profundas, escuras e com bolsas.',
       image: '/images/work_2.png'),
   RecentWork(
-      title: 'Emagrecimento Facial',
+      title: 'Revitalização da Boca e Volumização dos Lábios',
       id: 1,
-      category: 'Graphic Design',
+      category: 'Levamos brilho e volume aos seus lábios em conjunto com a remoção de linhas de expressão em toda a região da boca.',
       image: '/images/work_3.png'),
   RecentWork(
       title: 'Bioestimuladores',
@@ -34,8 +34,8 @@ List<RecentWork> recentWork = [
       category: 'Graphic Design',
       image: '/images/work_4.png'),
         RecentWork(
-      title: 'Pele',
+      title: 'Recuperação de Manchas na Pele',
       id: 1,
-      category: 'Graphic Design',
+      category: 'Utilizamos técnicas eficazes na remoção de manchas para uma pele impecável e uniforme.',
       image: '/images/work_4.png'),
 ];

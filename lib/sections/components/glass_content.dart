@@ -28,24 +28,25 @@ class GlassContente extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Dra. Raissa Campos',
-                style: TextStyle(
-                    fontSize: 80,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    height: 1.5),
+              Text(
+                'Clínica estética especializada'.toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                  height: 1.5,
+                ),
               ),
               Text(
                 'Especialista em Harmonização Orofacial',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
               ),
               Text(
                 'Creativite Design',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
               ),
             ],

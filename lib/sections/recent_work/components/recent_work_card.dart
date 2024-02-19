@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web/sections/about/about_section.dart';
+import 'package:web/sections/about/components/about_section_text.dart';
 
 import '../../../constants.dart';
 import '../../../models/recent_work.dart';
@@ -46,7 +46,11 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         duration: duration,
         child: Row(
           children: [
-            Image.asset(recentWork[widget.index].image!),
+            Image.asset(
+              recentWork[widget.index].image!,
+              fit: BoxFit.cover,
+              height: 50,
+            ),
             Expanded(
               child: Padding(
                 padding:
@@ -59,18 +63,14 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                     const SizedBox(
                       height: kDefaultPadding / 2,
                     ),
-                    Text(
-                      recentWork[widget.index].title!,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineSmall!
-                          .copyWith(height: 1.5),
+                    SubtitlePrincipal(
+                      title: recentWork[widget.index].title!,
+                      subtitle: recentWork[widget.index].category!,
                     ),
                     const SizedBox(
                       height: kDefaultPadding,
                     ),
                     GestureDetector(
-                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutSection(),)),
                       child: const Text(
                         'Ver Detalhes',
                         style: TextStyle(decoration: TextDecoration.underline),
