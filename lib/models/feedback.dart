@@ -21,21 +21,21 @@ List<Feedback> feedback = [
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
-    color: const Color.fromARGB(255, 243, 215, 180),
+    color: Colors.red[50],
   ),
   Feedback(
     id: 2,
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
-    color: const Color(0xFFD9FFFC),
+    color:  Colors.red[50],
   ),
   Feedback(
     id: 3,
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
-    color: const Color.fromARGB(255, 243, 217, 255),
+    color: Colors.red[50],
   ),
 ];
 

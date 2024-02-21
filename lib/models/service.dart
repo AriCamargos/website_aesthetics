@@ -16,7 +16,6 @@ class Service {
   });
 }
 
-// For demo list of service
 List<Service> services = [
   Service(
       id: 1,
@@ -32,7 +31,8 @@ List<Service> services = [
     title: "Toxina Botulínica",
     image: "/images/desktop.png",
     color: const Color(0xFFE4FFC7),
-    subtitle: '',
+    subtitle:
+        'Os efeitos de determinados procedimentos acabam gerando um alívio enorme para quem sofre com essa dificuldade.',
     //  press: (){}
   ),
   Service(
@@ -40,23 +40,33 @@ List<Service> services = [
     title: "Emagrecimento Facial",
     image: "/images/ui.png",
     color: const Color(0xFFFFF3DD),
-    subtitle: '',
+    subtitle:
+        'Utilizamos técnicas poderosas e tecnológicas que evitam consideravelmente marcas de expressão.',
 
     //   press: (){}
   ),
   Service(
     id: 4,
-    title: 'Bioestimuladores',
+    title: 'Inibem os Músculos Tensos',
     image: "/images/Intreaction_design.png",
     color: const Color(0xFFFFE0E0),
-    subtitle: '',
-
-    //  press: (){}
+    subtitle:
+        'Há procedimentos indicados para dores de cervical e de cabeça tensional, já que descansam os músculos da região afetada.',
   ),
-  /* Service(
+  Service(
     id: 4,
-    title: "Pele",
+    title: "Previnem as Rugas",
     image: "/images/Intreaction_design.png",
     color: const Color(0xFFFFE0E0),
-  ),*/
+    subtitle:
+        'Mantendo consultas periódicas os efeitos dos tratamentos irão continuar sua eficácia e assim evitando rugas marcadas no futuro.',
+  ),
+  Service(
+    id: 4,
+    title: "Previnem as Rugas",
+    image: "/images/Intreaction_design.png",
+    color: const Color(0xFFFFE0E0),
+    subtitle:
+        'Mantendo consultas periódicas os efeitos dos tratamentos irão continuar sua eficácia e assim evitando rugas marcadas no futuro.',
+  ),
 ];
