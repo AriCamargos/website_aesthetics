@@ -154,15 +154,15 @@ class ContactForm extends StatelessWidget {
         const SizedBox(
           height: kDefaultPadding * 2,
         ),
-        Center(
-          child: FittedBox(
-            child: DefaultButton(
-              text: 'Me Contate',
-              image: '/images/contact_icon.png',
-              press: () {},
-            ),
-          ),
-        ),
+        // Center(
+        //  child: FittedBox(
+        // child: DefaultButton(
+        //text: 'Me Contate',
+        //   image: '/images/contact_icon.png',
+        //   press: () {},
+        //   ),
+        // ),
+        // ),
       ],
     ));
   }

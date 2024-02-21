@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web/components/section_title.dart';
 import 'package:web/models/recent_work.dart';
-import 'package:web/sections/about/components/about_section_text.dart';
-import '../../components/hireme_card.dart';
+import 'package:web/sections/components/main_title.dart';
 import '../../constants.dart';
 import 'components/recent_work_card.dart';
 
@@ -28,13 +26,15 @@ class RecentWorkSection extends StatelessWidget {
               offset: const Offset(0, -80),
               child: const HireMeCard(),
             ),*/
-            const TitleAndSubtitle(
+            const SizedBox(height: 30),
+            const MainTitle(
               title: 'TRATAMENTOS FULL FACE',
-              subtitle: 'Nossos principais tratamentos atuam no rejuvenescimento de todas as belezas',
-             // color: Color(0xFFFFB100),
+              subtitle:
+                  'Nossos principais tratamentos atuam no rejuvenescimento de todas as belezas',
+              // color: Color(0xFFFFB100),
             ),
             const SizedBox(
-              height: kDefaultPadding * 1.5,
+              height: kDefaultPadding * 2.5,
             ),
             SizedBox(
               width: 1110,
