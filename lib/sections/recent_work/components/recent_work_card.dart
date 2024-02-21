@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web/sections/about/components/about_section_text.dart';
 
 import '../../../constants.dart';
 import '../../../models/recent_work.dart';
+import '../../components/main_subtitle.dart';
 
 class RecentWorkCard extends StatefulWidget {
   final int index;
@@ -36,20 +36,20 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         });
       },
       child: AnimatedContainer(
-        height: 320,
+        height: 200,
         width: 540,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: boxShadow,
-        ),
+        //decoration: BoxDecoration(
+         // color: Colors.white,
+        //  borderRadius: BorderRadius.circular(10),
+        //  boxShadow: boxShadow,
+       // ),
         duration: duration,
         child: Row(
           children: [
             Image.asset(
               recentWork[widget.index].image!,
               fit: BoxFit.cover,
-              height: 50,
+              height: 200,
             ),
             Expanded(
               child: Padding(
@@ -59,23 +59,22 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Text(recentWork[widget.index].title!),
                     const SizedBox(
                       height: kDefaultPadding / 2,
                     ),
-                    SubtitlePrincipal(
+                    MainSubtitle(
                       title: recentWork[widget.index].title!,
                       subtitle: recentWork[widget.index].category!,
                     ),
                     const SizedBox(
                       height: kDefaultPadding,
                     ),
-                    GestureDetector(
-                      child: const Text(
-                        'Ver Detalhes',
-                        style: TextStyle(decoration: TextDecoration.underline),
-                      ),
-                    ),
+                    //GestureDetector(
+                    //  child: const Text(
+                   //     'Ver Detalhes',
+                    //    style: TextStyle(decoration: TextDecoration.underline),
+                    //  ),
+                   // ),
                   ],
                 ),
               ),

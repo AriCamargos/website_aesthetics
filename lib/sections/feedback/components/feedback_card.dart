@@ -70,7 +70,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
             ),
             Text(
               feedback[widget.index].name!,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             )
