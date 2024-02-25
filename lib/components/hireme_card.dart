@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import 'default_button.dart';
 
 class HireMeCard extends StatelessWidget {
   const HireMeCard({
@@ -54,11 +53,7 @@ class HireMeCard extends StatelessWidget {
               ],
             ),
           ),
-          DefaultButton(
-            image: 'images/hand.png',
-            text: 'Saiba mais',
-            press: () {},
-          ),
+          
         ],
       ),
     );
