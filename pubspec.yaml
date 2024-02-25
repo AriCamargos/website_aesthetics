@@ -34,6 +34,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.4
+  font_awesome_flutter: ^10.4.0
+  responsive_framework: ^1.0.0
+  loop_page_view: ^1.2.5
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +91,8 @@ flutter:
     - assets/images/model.png
     - assets/images/write-page.png
     - assets/images/woman_seat.jpg
+    - assets/images/banner1.png
+    - assets/images/banner2.png
 
 
 
