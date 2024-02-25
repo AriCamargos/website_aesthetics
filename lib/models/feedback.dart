@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Feedback {
-  String? name;
+  String name;
   String? review;
-  String userPic;
+  String? userPic;
   int? id;
   Color? color;
   Feedback({
     required this.name,
     this.review,
-    required this.userPic,
+    this.userPic,
     required this.id,
     required this.color,
   });
@@ -28,10 +28,24 @@ List<Feedback> feedback = [
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
-    color:  Colors.red[50],
+    color: Colors.red[50],
   ),
   Feedback(
     id: 3,
+    name: 'Antonela Miranda',
+    review: review,
+    userPic: 'assets/images/people.png',
+    color: Colors.red[50],
+  ),
+  Feedback(
+    id: 4,
+    name: 'Antonela Miranda',
+    review: review,
+    userPic: 'assets/images/people.png',
+    color: Colors.red[50],
+  ),
+  Feedback(
+    id: 5,
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
