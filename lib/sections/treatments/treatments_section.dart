@@ -44,14 +44,12 @@ class TreatmentsSection extends StatelessWidget {
                     TreatmentsSectionText(
                       title: 'Como funcionam os tratamentos?',
                       subtitle:
-                          '''Cuidadosamente personalizados para as necessidades de cada cliente,utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.
+                          '''Cuidadosamente personalizados para as necessidades de cada cliente, utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.
 Todos os nossos procedimentos visam resultados duradouros através de técnicas validadas e produtos de marcas conhecidas.
               
 Oferecemos uma grande variedade de tratamentos, confira alguns:''',
                     ),
-                    SizedBox(
-                      height: 15,
-                    ),
+                    SizedBox(height: 15),
                     CheckList(),
                   ],
                 ),

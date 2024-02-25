@@ -5,7 +5,7 @@ import '../components/main_title.dart';
 import 'components/feedback_card.dart';
 
 class FeedbackSection extends StatelessWidget {
-  const FeedbackSection({super.key});
+  const FeedbackSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +16,21 @@ class FeedbackSection extends StatelessWidget {
         children: [
           const MainTitle(
             title: 'Quem faz recomenda',
-            subtitle: 'Confira como os resultados estão encantando nossos clientes',
+            subtitle:
+                'Confira como os resultados estão encantando nossos clientes',
           ),
           const SizedBox(height: kDefaultPadding),
-          Row(
-            mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-            children: List.generate(
-              feedback.length,
-              (index) =>  FeedbackCard(index: index,),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            physics: const NeverScrollableScrollPhysics(),
+            child: Row(
+              children: List.generate(
+                feedback.length,
+                (index) => Padding(
+                  padding: const EdgeInsets.only(right: kDefaultPadding),
+                  child: FeedbackCard(index: index),
+                ),
+              ),
             ),
           ),
         ],
@@ -31,5 +38,3 @@ class FeedbackSection extends StatelessWidget {
     );
   }
 }
-
-

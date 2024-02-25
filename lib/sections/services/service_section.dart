@@ -31,8 +31,8 @@ class ServiceSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: kDefaultPadding * 5),
-          DefaultButton(
-            press: () {},
+          const WhatsappButton(
+            //press: () {},
           ),
           /* Row(
             mainAxisAlignment: MainAxisAlignment.center,

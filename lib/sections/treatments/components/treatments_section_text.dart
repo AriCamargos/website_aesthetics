@@ -20,6 +20,7 @@ class TreatmentsSectionText extends StatelessWidget {
             fontSize: 40,
           ),
         ),
+        const SizedBox(height: 20),
         Text(
           subtitle,
           textAlign: TextAlign.justify,
