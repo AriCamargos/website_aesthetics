@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../constants.dart';
-class MyOutlineButton extends StatelessWidget {
+class WhatsButton extends StatelessWidget {
   final Function press;
   final String text;
-  final String image;
-  const MyOutlineButton({
+  const WhatsButton({
     super.key,
     required this.press,
     required this.text,
-    required this.image,
   });
 
   @override
@@ -18,17 +16,14 @@ class MyOutlineButton extends StatelessWidget {
       style: OutlinedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
             vertical: kDefaultPadding,
-            horizontal: kDefaultPadding * 2.5,
+            horizontal: kDefaultPadding,
           ),
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
       onPressed: () {},
       child: Row(
         children: [
-          Image.asset(
-           image,
-            height: 40,
-          ),
+          const FaIcon(FontAwesomeIcons.whatsapp),
           const SizedBox(width: kDefaultPadding,),
           Text(text),
         ],

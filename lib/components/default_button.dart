@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../constants.dart';
 
-class DefaultButton extends StatelessWidget {
-  final String? image;
-  final Function press;
-  const DefaultButton({
+class WhatsappButton extends StatelessWidget {
+  const WhatsappButton({
     super.key,
-    this.image,
-    required this.press,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: () {},
-      label: Text('Atendimento online'.toUpperCase()),
+      label: Text(
+        'Atendimento online'.toUpperCase(),
+        style: const TextStyle(
+          fontWeight: FontWeight.w600,
+        ),
+      ),
       icon: const FaIcon(FontAwesomeIcons.whatsapp),
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(
@@ -25,7 +26,7 @@ class DefaultButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        backgroundColor: const Color(0xFFE8F0F9),
+        backgroundColor: Colors.greenAccent[400],
       ),
       /*child: Row(
         children: [
