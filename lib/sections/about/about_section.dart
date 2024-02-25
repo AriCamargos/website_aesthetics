@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 
+import '../../components/default_button.dart';
 import '../treatments/components/checklist.dart';
 import '../treatments/components/treatments_section_text.dart';
 
@@ -18,18 +19,17 @@ class AboutSection extends StatelessWidget {
           colors: [Colors.red[200]!, Colors.white],
         ),
       ),*/
-      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      margin: const EdgeInsets.fromLTRB(0, kDefaultPadding, 0, 1),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          
+
           Row(
             children: [
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    
                     TreatmentsSectionText(
                       title: '',
                         subtitle:
@@ -38,6 +38,8 @@ class AboutSection extends StatelessWidget {
                       height: 15,
                     ),
                     ChecklistAbout(),
+                    SizedBox(height: 15),
+                    Center(child: WhatsappButton()),
                   ],
                 ),
               ),
@@ -56,7 +58,7 @@ class AboutSection extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: kDefaultPadding * 2),
+         // const SizedBox(height: kDefaultPadding * 2),
         ],
       ),
     );
