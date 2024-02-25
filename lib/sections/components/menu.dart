@@ -28,22 +28,14 @@ class _MenuState extends State<Menu> {
       //epaço fora do menu
       constraints: const BoxConstraints(maxWidth: 1110),
       height: 50,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
-        ),
-        boxShadow: [kDefaultShadow],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 100.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(
-            menuItens.length,
-            (index) => buildMenuItem(index),
-          ),
+
+      width: MediaQuery.of(context).size.width,
+      
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(
+          menuItens.length,
+          (index) => buildMenuItem(index),
         ),
       ),
     );
@@ -68,7 +60,7 @@ class _MenuState extends State<Menu> {
             children: [
               Text(
                 menuItens[index],
-                style: const TextStyle(fontSize: 20, color: kTextColor),
+                style: const TextStyle(fontSize: 15, color: kTextColor),
               ),
               //Hover Home
               AnimatedPositioned(
