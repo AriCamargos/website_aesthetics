@@ -20,18 +20,13 @@ class _ServiceCardState extends State<ServiceCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      /*onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const AboutSection(),
-        ),
-      ),*/
+      onTap: (){},
+      hoverColor: Colors.transparent,
       onHover: (value) {
         setState(() {
           isHover = value;
         });
       },
-      hoverColor: Colors.transparent,
       child: AnimatedContainer(
         duration: duration,
         constraints: const BoxConstraints(maxWidth: 350), // Defina a largura máxima do cartão

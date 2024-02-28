@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Feedback {
-  String name;
-  String? review;
-  String? userPic;
-  int? id;
-  Color? color;
-  Feedback({
+class Feedback extends MaterialScrollBehavior{
+  final String name;
+  final String? review;
+  final String? userPic;
+  final int? id;
+  final Color? color;
+  const Feedback({
     required this.name,
     this.review,
     this.userPic,
@@ -14,6 +14,7 @@ class Feedback {
     required this.color,
   });
 }
+
 
 List<Feedback> feedback = [
   Feedback(
@@ -37,7 +38,7 @@ List<Feedback> feedback = [
     userPic: 'assets/images/people.png',
     color: Colors.red[50],
   ),
-  Feedback(
+  /*Feedback(
     id: 4,
     name: 'Antonela Miranda',
     review: review,
@@ -50,7 +51,7 @@ List<Feedback> feedback = [
     review: review,
     userPic: 'assets/images/people.png',
     color: Colors.red[50],
-  ),
+  ),*/
 ];
 
 String review =

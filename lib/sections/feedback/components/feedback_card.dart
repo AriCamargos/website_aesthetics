@@ -29,9 +29,10 @@ class _FeedbackCardState extends State<FeedbackCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-       // margin: const EdgeInsets.only(top: kDefaultPadding * 3),
+        margin: const EdgeInsets.only(top: kDefaultPadding * 3),
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        height: 220,
+        //tamanho de dentro do card
+        height: 330,
         width: 300,
         decoration: BoxDecoration(
           color: feedback[widget.index].color,
@@ -41,22 +42,37 @@ class _FeedbackCardState extends State<FeedbackCard> {
         child: Column(
           children: [
             Transform.translate(
-              offset: const Offset(0, -55),
+              //raio da foto ao meio
+              offset: const Offset(0, -35),
               child: Container(
-                  //height: 100,
-                  // width: 100,
-                  /*decoration: BoxDecoration(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 10,
+                  border: Border.all(color: Colors.white, width: 8),
+                  image: DecorationImage(
+                    image: AssetImage(feedback[widget.index].userPic!),
                   ),
-                  //image: DecorationImage(
-                 //   image: AssetImage(feedback[widget.index].userPic),
-                 // ),
-                ),*/
-                  ),
+                ),
+              ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star_rate_rounded,
+                    color: Colors.yellow[600], size: 20),
+                Icon(Icons.star_rate_rounded,
+                    color: Colors.yellow[600], size: 20),
+                Icon(Icons.star_rate_rounded,
+                    color: Colors.yellow[600], size: 20),
+                Icon(Icons.star_rate_rounded,
+                    color: Colors.yellow[600], size: 20),
+                Icon(Icons.star_rate_rounded,
+                    color: Colors.yellow[600], size: 20),
+              ],
+            ),
+                            const SizedBox(height: 15),
+
             Text(
               feedback[widget.index].review!,
               style: const TextStyle(
@@ -70,7 +86,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
               height: kDefaultPadding,
             ),
             Text(
-              feedback[widget.index].name!,
+              feedback[widget.index].name,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
