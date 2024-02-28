@@ -22,9 +22,9 @@ class CheckList extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.check,
-                    color: Colors.red[200],
+                    color: Color.fromARGB(255, 211, 201, 201),
                     size: 30,
                     weight: 30,
                   ),

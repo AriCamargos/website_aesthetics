@@ -16,16 +16,35 @@ class QuestionsSection extends StatelessWidget {
         children: [
           const MainTitle(
             title: 'Dúvidas frequentes',
-            subtitle: 'Caso sua dúvida não estiver listada abaixo, fale conosco pelo botão do WhatsApp',
+            subtitle:
+                'Caso sua dúvida não estiver listada abaixo, fale conosco pelo botão do WhatsApp',
           ),
           const SizedBox(height: kDefaultPadding),
-          Row(
-            mainAxisAlignment:MainAxisAlignment.center,
-            children: List.generate(
-              questions.length,
-              (index) =>  const QuestionsCard(),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Wrap(
+              alignment: WrapAlignment.center,
+              runSpacing: 20,
+              children: List.generate(
+                questions.length ~/ 2,
+                (index) => Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: QuestionsCard(index: index),
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: QuestionsCard(index: index),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
-          ),
+          ],),
         ],
       ),
     );

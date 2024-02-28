@@ -1,49 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:web/components/default_button.dart';
-import 'package:web/components/section_title.dart';
-import 'package:web/constants.dart';
-import 'package:web/sections/components/main_subtitle.dart';
-import '../components/main_title.dart';
+
+import 'package:web/constants.dart' show kDefaultPadding;
 import 'package:web/models/questions.dart';
-import '../../models/questions.dart';
+
+import '../components/main_subtitle.dart';
 
 class QuestionsCard extends StatelessWidget {
+  final int index;
   const QuestionsCard({
     super.key,
+    required this.index,
   });
 
   @override
   Widget build(BuildContext context) {
     Duration duration = const Duration(milliseconds: 200);
 
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: AnimatedContainer(
-        // duration: duration,
-        margin: const EdgeInsets.only(top: kDefaultPadding * 3),
-        padding: const EdgeInsets.symmetric(
-          horizontal: kDefaultPadding,
-          vertical: kDefaultPadding,
-        ),
-        height: 200,
-        width: 500,
-        decoration: BoxDecoration(
-          color: Colors.red[50],
-        ),
-        duration: duration,
-        child: Column(
-          children: [
-            Column(
-              children: [
-                MainSubtitle(
-                  title: questions[0].title,
-                  subtitle: questions[0].subtitle,
-                ),
-              ],
-            ),
-            const SizedBox(height: 30),
-          ],
-        ),
+    return AnimatedContainer(
+      // duration: duration,
+      constraints: const BoxConstraints(maxWidth: 500),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      height: 200,
+      //width: 350,
+      decoration: BoxDecoration(
+        color: Colors.red[50],
+      ),
+      duration: duration,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          MainSubtitle(
+           title: questions[index].title,
+           subtitle:  questions[index].subtitle,
+           aligment: TextAlign.center,
+          ),
+        ],
       ),
     );
   }

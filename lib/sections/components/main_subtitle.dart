@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 class MainSubtitle extends StatelessWidget {
   final String title;
-  final String? subtitle;
-  const MainSubtitle({super.key, required this.title, this.subtitle});
+  final String subtitle;
+  final TextAlign? aligment;
+  const MainSubtitle({super.key, required this.title, required this.subtitle, this.aligment,});
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,7 @@ class MainSubtitle extends StatelessWidget {
       children: [
         Text(
           title,
+          textAlign: aligment,
           style: const TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -20,8 +22,8 @@ class MainSubtitle extends StatelessWidget {
           height: 10,
         ),
         Text(
-          subtitle!,
-          textAlign: TextAlign.justify,
+          subtitle,
+          textAlign: aligment,
           style: const TextStyle(
             color: Colors.black,
             fontSize: 15,

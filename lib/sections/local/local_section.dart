@@ -5,7 +5,7 @@ import '../../../constants.dart';
 import '../components/main_title.dart';
 
 class LocalSection extends StatelessWidget {
-  const LocalSection({super.key, Key});
+  const LocalSection({super.key});
 
   @override
   Widget build(BuildContext context) {
