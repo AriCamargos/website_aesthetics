@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:web/repository/whatsapp_repository.dart';
 import '../constants.dart';
 
 class WhatsappButton extends StatelessWidget {
@@ -10,7 +11,7 @@ class WhatsappButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () {},
+      onPressed: () => openWhatsApp(),
       label: Text(
         'Atendimento online'.toUpperCase(),
         style: const TextStyle(
@@ -28,18 +29,6 @@ class WhatsappButton extends StatelessWidget {
         ),
         backgroundColor: Colors.greenAccent[400],
       ),
-      /*child: Row(
-        children: [
-          Image.asset(
-            image!,
-            height: 40,
-          ),
-          const SizedBox(
-            width: kDefaultPadding,
-          ),
-          Text(text),
-        ],
-      ),*/
     );
   }
 }

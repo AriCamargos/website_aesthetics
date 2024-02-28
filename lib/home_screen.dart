@@ -10,6 +10,7 @@ import 'package:web/sections/footer/footer_section.dart';
 import 'package:web/sections/recent_work/recent_work_section.dart';
 import 'package:web/sections/services/service_section.dart';
 import 'package:web/sections/top_section/top_section.dart';
+import 'package:web/repository/whatsapp_repository.dart';
 
 import 'components/banner.dart';
 
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => openWhatsApp(),
         elevation: 20.0,
         backgroundColor: Colors.green,
         autofocus: true,

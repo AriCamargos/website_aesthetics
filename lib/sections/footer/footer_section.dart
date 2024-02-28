@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:web/repository/whatsapp_repository.dart';
 
-import '../../constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FooterSection extends StatelessWidget {
@@ -39,12 +37,12 @@ class FooterSection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => openInstagram(),
                     icon: const FaIcon(FontAwesomeIcons.instagram,
                         color: Colors.black54),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => openFacebook(),
                     icon: const FaIcon(FontAwesomeIcons.facebookF,
                         color: Colors.black54),
                   ),
