@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:web/constants.dart';
 import 'package:web/sections/about/about_section.dart';
-import 'package:web/sections/local/local_section.dart';
+import 'package:web/sections/local/map_section.dart';
 import 'package:web/sections/questions/components/questions_section.dart';
 import 'package:web/sections/treatments/treatments_section.dart';
 import 'package:web/sections/feedback/feedback_section.dart';
@@ -11,6 +11,8 @@ import 'package:web/sections/recent_work/recent_work_section.dart';
 import 'package:web/sections/services/service_section.dart';
 import 'package:web/sections/top_section/top_section.dart';
 import 'package:web/repository/whatsapp_repository.dart';
+
+
 
 import 'components/banner.dart';
 
@@ -41,10 +43,14 @@ class HomeScreen extends StatelessWidget {
           const ServiceSection(),
           const FeedbackSection(),
           const QuestionsSection(),
-          const LocalSection(),
+           const MapSection( ),
           const FooterSection(),
         ]),
       ),
     );
   }
 }
+
+
+
+

@@ -3,7 +3,7 @@ import 'package:web/constants.dart';
 import 'package:web/home_screen.dart';
 import 'package:web/sections/feedback/feedback_section.dart';
 import 'package:web/sections/footer/footer_section.dart';
-import 'package:web/sections/local/local_section.dart';
+import 'package:web/sections/local/map_section.dart';
 import 'package:web/sections/questions/components/questions_section.dart';
 import 'package:web/sections/recent_work/recent_work_section.dart';
 import 'package:web/sections/top_section/top_section.dart';
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         '/sevice': (context) => const ServiceSection(),
         '/feedback': (context) => const FeedbackSection(),
         '/questions': (context) => const QuestionsSection(),
-        '/local': (context) => const LocalSection(),
+        '/local': (context) => const MapSection(),
         '/footer': (context) => const FooterSection(),
       },
     );
