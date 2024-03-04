@@ -11,26 +11,29 @@ class TreatmentsSectionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title!,
-          style: const TextStyle(
-            fontSize: 40,
+    return Padding(
+      padding: const EdgeInsets.all(0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title!,
+            style: const TextStyle(
+              fontSize: 40,
+            ),
           ),
-        ),
-        const SizedBox(height: 20),
-        Text(
-          subtitle,
-          textAlign: TextAlign.justify,
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            color: Colors.black,
+          const SizedBox(height: 20),
+          Text(
+            subtitle,
+            textAlign: TextAlign.justify,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

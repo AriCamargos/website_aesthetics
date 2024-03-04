@@ -19,10 +19,12 @@ class TopSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(vertical: 8),
             child: Image.asset(
-              'assets/images/logo1.png',
-              color: Colors.black,
+              'images/logologo.png',
+              width: 200,
+              height: 150,
+              fit: BoxFit.fill,
             ),
           ),
           Container(
@@ -33,21 +35,34 @@ class TopSection extends StatelessWidget {
             height: 50,
             width: MediaQuery.of(context).size.width,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                  child: const Text('Tratamentos'),
+                  child: const Text(
+                    'Tratamentos',
+                    style: TextStyle(fontSize: 15),
+                  ),
                   onPressed: () => onMenuClick(1),
                 ),
                 TextButton(
-                  child: const Text('Dra Raissa'),
+                  child: const Text(
+                    'Dra Raissa',
+                    style: TextStyle(fontSize: 15),
+                  ),
                   onPressed: () => onMenuClick(2),
                 ),
                 TextButton(
-                  child: const Text('Localização'),
+                  child: const Text(
+                    'Localização',
+                    style: TextStyle(fontSize: 15),
+                  ),
                   onPressed: () => onMenuClick(3),
                 ),
                 TextButton(
-                  child: const Text('Contato'),
+                  child: const Text(
+                    'Contato',
+                    style: TextStyle(fontSize: 15),
+                  ),
                   onPressed: () => onMenuClick(4),
                 ),
               ],

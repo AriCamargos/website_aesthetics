@@ -37,10 +37,10 @@ class TreatmentsSection extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children:[
                     TreatmentsSectionText(
                       title: 'Como funcionam os tratamentos?',
                       subtitle:

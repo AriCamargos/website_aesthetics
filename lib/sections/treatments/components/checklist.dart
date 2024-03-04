@@ -54,6 +54,7 @@ class ChecklistAbout extends StatelessWidget {
     final List<String> itens = <String>[
       'Graduada em Odontologia (FMU)',
       'Especialista em Saúde Pública (UAM)',
+      'MBA em Marketing Digital (UAM)',
       'Especialista em Harmonização Orofacial (IBOP)',
     ];
 
