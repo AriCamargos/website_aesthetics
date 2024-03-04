@@ -37,7 +37,9 @@ dependencies:
   font_awesome_flutter: ^10.4.0
   responsive_framework: ^1.0.0
   loop_page_view: ^1.2.5
-
+  http: ^0.13.6
+  url_launcher: ^6.1.11
+  google_maps_flutter: ^2.5.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,17 +77,9 @@ flutter:
     - assets/images/desktop.png
     - assets/images/intreaction_design.png
     - assets/images/recent_work_bg.png
-    - assets/images/email.png
     - assets/images/work_1.png
     - assets/images/people.png
     - assets/images/bg_img_2.png
-    - assets/images/skype.png
-    - assets/images/messanger.png
-    - assets/images/whatsapp.png
-    - assets/images/contact_icon.png
-    - assets/images/rosegold.jpg
-    - assets/images/rose_gold.jpg
-    - assets/images/rose_gold.jpg
     - assets/images/dra.png
     - assets/google_fonts/
     - assets/images/model.png
@@ -93,9 +87,11 @@ flutter:
     - assets/images/woman_seat.jpg
     - assets/images/banner1.png
     - assets/images/banner2.png
-
-
-
+    - assets/images/logo_background.jpg
+    - assets/images/logologo.png
+    - assets/images/logo_name.png
+    - assets/images/logo_main_name.png
+    - assets/images/about_rai.jp
 
 
 
