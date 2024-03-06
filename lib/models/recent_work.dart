@@ -14,32 +14,31 @@ class RecentWork {
 
 List<RecentWork> recentWork = [
   RecentWork(
-      title: 'Tratamentos para Flacidez Facial',
-      id: 1,
-      category:
-          'Liberte-se das marcas do tempo recuperando sua beleza e jovialidade com uma pele mais firme e radiante.',
-      image: '/images/work_1.png'),
+    title: 'Rejuvenescimento Facial',
+    id: 1,
+    category:
+        'Combata rugas, linhas de expressão e promova uma pele radiante com nossos tratamentos de toxina botulínica, skinbooster, microagulhamento e mais.',
+    image: '/images/woman-pixel4.png',
+  ),
   RecentWork(
-      title: 'Rejuvenescimento Profundo das Olheiras',
-      id: 1,
-      category:
-          'Olhos radiantes e sem marcas com o rejuvenescimento de olheiras profundas, escuras e com bolsas.',
-      image: '/images/work_2.png'),
+    title: 'Harmonização Facial',
+    id: 2,
+    category:
+        'Descubra a harmonização facial para realçar sua beleza natural! Explore preenchimentos, rinomodelação, fios de PDO e outros procedimentos para equilibrar seus traços.',
+    image: '/images//woman-pixel2.png',
+  ),
   RecentWork(
-      title: 'Revitalização da Boca e Volumização dos Lábios',
-      id: 1,
-      category:
-          'Levamos brilho e volume aos seus lábios em conjunto com a remoção de linhas de expressão em toda a região da boca.',
-      image: '/images/work_3.png'),
+    title: 'Melhora a Textura e Aparência da Pele',
+    id: 3,
+    category:
+        'Nossos procedimentos de microagulhamento, peeling químico, laser Lavieen e ultraformer são a chave para uma textura suave e uma aparência impecável.',
+    image: '/images//woman-pixel3.png',
+  ),
   RecentWork(
-      title: 'Bioestimuladores',
-      id: 1,
-      category: 'Graphic Design',
-      image: '/images/work_4.png'),
-  RecentWork(
-      title: 'Recuperação de Manchas na Pele',
-      id: 1,
-      category:
-          'Utilizamos técnicas eficazes na remoção de manchas para uma pele impecável e uniforme.',
-      image: '/images/work_4.png'),
+    title: 'Redução de Gordura Localizada',
+    id: 4,
+    category:
+        'Nossos tratamentos de lipo enzimática, lipo de papada e liposucção 3D são eficazes para eliminar gorduras localizadas e esculpir seu corpo dos sonhos.',
+    image: '/images//woman-pixel5.png',
+  ),
 ];

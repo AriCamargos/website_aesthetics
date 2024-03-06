@@ -18,55 +18,51 @@ class Service {
 
 List<Service> services = [
   Service(
-      id: 1,
-      title: "Preenchimento",
-      image: "/images/graphic.png",
-      color: const Color(0xFFD9FFFC),
-      subtitle:
-          'A diminuição da contração muscular ameniza rugas de expressão como pés de galinha, linhas da testa e mais.'
-      //press:
-      ),
+    id: 1,
+    title: "Evitam o surgimento de linhas de expressão",
+    image: "/images/.png",
+    color: const Color(0xFFD9FFFC),
+    subtitle:
+        'Reduz rugas e linhas de expressão, promovendo uma aparência jovem e revitalizada.',
+  ),
   Service(
     id: 2,
-    title: "Toxina Botulínica",
+    title: "Corrije imperfeições",
     image: "/images/desktop.png",
     color: const Color(0xFFE4FFC7),
     subtitle:
-        'Os efeitos de determinados procedimentos acabam gerando um alívio enorme para quem sofre com essa dificuldade.',
-    //  press: (){}
+        'Adiciona volume e contorno facial, corrigindo imperfeições e proporcionando uma aparência mais jovem e harmoniosa.',
   ),
   Service(
     id: 3,
-    title: "Emagrecimento Facial",
+    title: "Pele mais firme e rejuvenescida",
     image: "/images/ui.png",
     color: const Color(0xFFFFF3DD),
     subtitle:
-        'Utilizamos técnicas poderosas e tecnológicas que evitam consideravelmente marcas de expressão.',
-
-    //   press: (){}
+        'Melhora a textura da pele, reduzindo manchas, cicatrizes e rugas. Estimula a produção de colágeno para uma pele mais firme e rejuvenescida.',
   ),
   Service(
     id: 4,
-    title: 'Inibem os Músculos Tensos',
-    image: "/images/Intreaction_design.png",
+    title: 'Contorno facial mais definido',
+    image: "/images/icon_beauty.png",
     color: const Color(0xFFFFE0E0),
     subtitle:
-        'Há procedimentos indicados para dores de cervical e de cabeça tensional, já que descansam os músculos da região afetada.',
+        'Elimina a gordura indesejada sob o queixo, proporcionando um contorno facial mais definido e uma aparência mais jovem.',
   ),
   Service(
-    id: 4,
-    title: "Previnem as Rugas",
-    image: "/images/Intreaction_design.png",
+    id: 5,
+    title: "Pele renovada radiante",
+    image: "/images/icon_botox.png",
     color: const Color(0xFFFFE0E0),
     subtitle:
-        'Mantendo consultas periódicas os efeitos dos tratamentos irão continuar sua eficácia e assim evitando rugas marcadas no futuro.',
+        'Renova a pele, removendo células mortas e promovendo o crescimento de uma pele mais lisa e radiante. Reduz manchas e rugas.',
   ),
   Service(
-    id: 4,
-    title: "Previnem as Rugas",
-    image: "/images/Intreaction_design.png",
+    id: 6,
+    title: "Dê adeus à flacidez",
+    image: "/images/icon_treatments.png",
     color: const Color(0xFFFFE0E0),
     subtitle:
-        'Mantendo consultas periódicas os efeitos dos tratamentos irão continuar sua eficácia e assim evitando rugas marcadas no futuro.',
+        'Diga adeus à flacidez facial com o Ultraformer, um procedimento não invasivo que utiliza ultrassom para estimular o colágeno e promover um lifting facial natural!',
   ),
 ];
