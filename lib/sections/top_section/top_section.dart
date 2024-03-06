@@ -8,74 +8,50 @@ class TopSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
     return Container(
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [kDefaultShadow],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.all(8.0),
             child: Image.asset(
-              'images/logologo.png',
-              width: 200,
-              height: 150,
-              fit: BoxFit.fill,
+              'images/logologo-simbol.png',
+              fit: BoxFit.cover,
+              width: 60,
+              height: 60,
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            padding:
-                const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
-            constraints: const BoxConstraints(maxWidth: 1110),
-            height: 50,
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                  child: const Text(
-                    'Tratamentos',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () => onMenuClick(1),
-                ),
-                TextButton(
-                  child: const Text(
-                    'Dra Raissa',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () => onMenuClick(2),
-                ),
-                TextButton(
-                  child: const Text(
-                    'Localização',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () => onMenuClick(3),
-                ),
-                TextButton(
-                  child: const Text(
-                    'Contato',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () => onMenuClick(4),
-                ),
-              ],
-            ),
+          const Spacer(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              buildMenuButton('Tratamentos', 1),
+              buildMenuButton('Dra Raissa', 2),
+              buildMenuButton('Localização', 3),
+              buildMenuButton('Contato', 4),
+            ],
           ),
         ],
       ),
     );
   }
-}
 
-final List<String> bannerList = [
-  '/images/write-page.png',
-  '/images/banner1.png',
-  '/images/banner2.png',
-];
+  Widget buildMenuButton(String text, int index) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: TextButton(
+        onPressed: () => onMenuClick(index),
+        child: Text(
+          text,
+          style: const TextStyle(fontSize: 15, color: kColorGold),
+        ),
+      ),
+    );
+  }
+}
