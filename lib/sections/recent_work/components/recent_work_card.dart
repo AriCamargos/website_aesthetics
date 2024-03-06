@@ -6,11 +6,15 @@ import '../../components/main_subtitle.dart';
 
 class RecentWorkCard extends StatefulWidget {
   final int index;
-  final Function() press;
+  final String? title;
+  final String? subtitle;
+final String image;
+ // final Function() press;
   const RecentWorkCard({
     super.key,
     required this.index,
-    required this.press,
+  //  required this.press,
+    this.title,  this.subtitle, required this.image,
   });
 
   @override
@@ -29,15 +33,14 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
     }
 
     return InkWell(
-      onTap: widget.press,
+     // onTap: widget.press,
       onHover: (value) {
         setState(() {
           isHover = value;
         });
       },
       child: AnimatedContainer(
-        height: 200,
-        width: 540,
+        //width: 540,
         //decoration: BoxDecoration(
          // color: Colors.white,
         //  borderRadius: BorderRadius.circular(10),
@@ -54,27 +57,19 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
             Expanded(
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                    const EdgeInsets.all(10.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
+
                   children: [
                     const SizedBox(
                       height: kDefaultPadding / 2,
                     ),
                     MainSubtitle(
-                      title: recentWork[widget.index].title!,
-                      subtitle: recentWork[widget.index].category!,
+                      aligment: TextAlign.start,
+                      title: widget.title!,
+                      subtitle: widget.subtitle!,
+                      color: Colors.black,
                     ),
-                    const SizedBox(
-                      height: kDefaultPadding,
-                    ),
-                    //GestureDetector(
-                    //  child: const Text(
-                   //     'Ver Detalhes',
-                    //    style: TextStyle(decoration: TextDecoration.underline),
-                    //  ),
-                   // ),
                   ],
                 ),
               ),
