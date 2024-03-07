@@ -13,6 +13,7 @@ class RecentWorkSection extends StatelessWidget {
     final responsive = Responsive(context);
     return Container(
       width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
       decoration: BoxDecoration(
         color: const Color(0xFFF7E8FF).withOpacity(0.3),
         image: const DecorationImage(
@@ -30,32 +31,32 @@ class RecentWorkSection extends StatelessWidget {
           ),
           responsive.value({
             Breakpoints.xs: SizedBox(
-              width: 1110,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: recentWork
                     .map(
                       (work) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        padding: const EdgeInsets.all(8),
                         child: Column(
                           children: [
-                            RecentWorkCard(
-                              index: recentWork.indexOf(work),
-                              title: '',
-                             subtitle: '',
-                              image: work.image!,
+                            Image.asset(
+                              work.image!,
+                              fit: BoxFit.cover,
                             ),
                             const SizedBox(height: 10),
                             Text(
-                              work.title!, // Exemplo: Titulo
-                              style: TextStyle(
+                              work.title!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                               ),
                             ),
                             Text(
-                              work.category!, // Exemplo: Subtitulo
-                              style: TextStyle(
-                                fontSize: 16,
+                              work.category!,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontSize: 14,
                               ),
                             ),
                           ],
@@ -84,7 +85,6 @@ class RecentWorkSection extends StatelessWidget {
               ),
             ),
           }),
-          //const SizedBox(height: kDefaultPadding * 5),
         ],
       ),
     );
