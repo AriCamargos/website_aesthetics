@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web/constants.dart';
 
 class CheckList extends StatelessWidget {
   const CheckList({super.key});
@@ -24,15 +25,15 @@ class CheckList extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.check,
-                    color: Color.fromARGB(255, 211, 201, 201),
-                    size: 30,
-                    weight: 30,
+                    color: kColorGold,
+                    size: 20,
+                    weight: 20,
                   ),
                   const SizedBox(width: 8),
                   Text(
                     item,
                     style: const TextStyle(
-                      fontSize: 19,
+                      fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
                     ),
@@ -60,33 +61,35 @@ class ChecklistAbout extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.zero,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          for (var item in itens)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 4.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.check,
-                    color: Colors.red[200],
-                    size: 30,
-                    weight: 30,
-                  ),
-                  const SizedBox(width: 8),
-                  Text(
-                    item,
-                    style: const TextStyle(
-                      fontSize: 19,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
+      child: Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (var item in itens)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.check,
+                      color: kColorGold,
+                      size: 30,
+                      weight: 30,
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 8),
+                    Text(
+                      item,
+                      style: const TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-        ],
+          ],
+        ),
       ),
     );
   }

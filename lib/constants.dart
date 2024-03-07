@@ -2,12 +2,24 @@ import 'package:flutter/material.dart';
 
 const kTextColor = Color(0xff707070);
 const kTextLightColor = Color(0xFF555555);
+const kColorGold = Color(0xFFdda90d);
 
 const kDefaultPadding = 20.0;
+const kSizedWidth = SizedBox(width: 25);
+const kSizePageXs = EdgeInsets.all(10);
+const double kMdBreakpoint = 768; // Valor em pixels que representa a largura da tela para dispositivos médios
+const double kXsBreakpoint = 480; // Valor em pixels que representa a largura da tela para dispositivos extra pequenos (móveis)
+
 
 final kDefaultShadow = BoxShadow(
   offset: const Offset(0, 50),
   blurRadius: 50,
+  color: const Color(0xFF0700B1).withOpacity(0.15),
+);
+
+final kDefaultShadowMap = BoxShadow(
+  offset: const Offset(5,5),
+  blurRadius: 5,
   color: const Color(0xFF0700B1).withOpacity(0.15),
 );
 
