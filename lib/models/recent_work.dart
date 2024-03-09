@@ -24,18 +24,18 @@ List<RecentWork> recentWork = [
     title: 'Harmonização Facial',
     id: 2,
     category:
-        'Descubra a harmonização facial para realçar sua beleza natural! Explore preenchimentos, rinomodelação, fios de PDO e outros procedimentos para equilibrar seus traços.',
+        'Harmonização facial para realçar sua beleza natural! Explore preenchimentos, rinomodelação, fios de PDO e outros procedimentos para equilibrar seus traços.',
     image: '/images//woman-pixel2.png',
   ),
   RecentWork(
-    title: 'Melhora a Textura e Aparência da Pele',
+    title: 'Melhora Aparência da Pele',
     id: 3,
     category:
         'Nossos procedimentos de microagulhamento, peeling químico, laser Lavieen e ultraformer são a chave para uma textura suave e uma aparência impecável.',
     image: '/images//woman-pixel3.png',
   ),
   RecentWork(
-    title: 'Redução de Gordura Localizada',
+    title: 'Reduz Gordura Localizada',
     id: 4,
     category:
         'Nossos tratamentos de lipo enzimática, lipo de papada e liposucção 3D são eficazes para eliminar gorduras localizadas e esculpir seu corpo dos sonhos.',
