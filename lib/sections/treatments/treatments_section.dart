@@ -12,11 +12,11 @@ class TreatmentsSection extends StatelessWidget {
     final responsive = Responsive(context);
 
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPaddingMd * 2),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         children: [
-          const SizedBox(height: kDefaultPadding * 2),
+          const SizedBox(height: kDefaultPaddingMd * 2),
           responsive.value({
             Breakpoints.xs: Padding(
               padding: kSizePageXs,

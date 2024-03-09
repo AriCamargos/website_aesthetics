@@ -30,7 +30,7 @@ class RecentWorkCard extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                const SizedBox(height: kDefaultPadding / 2),
+                const SizedBox(height: kDefaultPaddingMd / 2),
                 MainSubtitle(
                   title: title!,
                   subtitle: subtitle!,

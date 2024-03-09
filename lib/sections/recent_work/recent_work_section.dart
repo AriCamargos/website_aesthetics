@@ -13,7 +13,7 @@ class RecentWorkSection extends StatelessWidget {
     final responsive = Responsive(context);
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddingMd * 3),
       decoration: BoxDecoration(
         color: const Color(0xFFF7E8FF).withOpacity(0.3),
         image: const DecorationImage(
@@ -71,8 +71,8 @@ class RecentWorkSection extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: kDefaultPadding,
-                mainAxisSpacing: kDefaultPadding,
+                crossAxisSpacing: kDefaultPaddingMd,
+                mainAxisSpacing: kDefaultPaddingMd,
                 childAspectRatio: 2.5,
               ),
               itemCount: recentWork.length,
