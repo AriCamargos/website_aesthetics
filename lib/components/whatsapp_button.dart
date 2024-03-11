@@ -10,6 +10,7 @@ class WhatsappButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     return ElevatedButton.icon(
       onPressed: () => openWhatsApp(),
       label: Text(
@@ -24,15 +25,16 @@ class WhatsappButton extends StatelessWidget {
         color: Colors.black,
       ),
       style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(
-          vertical: kDefaultPadding,
-          horizontal: kDefaultPadding * 2.5,
+        padding: EdgeInsets.symmetric(
+          vertical: isMobile ? kDefaultPaddingXs : kDefaultPaddingMd,
+          horizontal:  isMobile ? kDefaultPaddingXs : kDefaultPaddingMd  * 2.5,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
         backgroundColor: Colors.greenAccent[400],
       ),
+
     );
   }
 }
