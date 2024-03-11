@@ -10,7 +10,7 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddingMd * 2.5),
       constraints: const BoxConstraints(maxWidth: 1110),
       height: 50,
       width: MediaQuery.of(context).size.width,

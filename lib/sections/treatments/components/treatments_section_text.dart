@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
 
 class TreatmentsSectionText extends StatelessWidget {
   final String subtitle;
@@ -21,17 +23,19 @@ class TreatmentsSectionText extends StatelessWidget {
           children: [
             Text(
               title!,
-              textAlign: align,
-              style: const TextStyle(
-                fontSize: 40,
+              textAlign: TextAlign.start,
+              style: GoogleFonts.openSans(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.w300,
               ),
             ),
             const SizedBox(height: 20),
             Text(
               subtitle,
-              textAlign: align,
+              textAlign: TextAlign.start,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: Colors.black,
               ),

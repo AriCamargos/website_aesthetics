@@ -10,7 +10,7 @@ class FeedbackSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2.5),
+      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddingMd * 2.5),
       constraints: const BoxConstraints(maxWidth: 1110),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,13 +20,13 @@ class FeedbackSection extends StatelessWidget {
             subtitle:
                 'Confira como os resultados estão encantando nossos clientes',
           ),
-          const SizedBox(height: kDefaultPadding),
+          const SizedBox(height: kDefaultPaddingMd),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               feedback.length,
               (index) => Padding(
-                padding: const EdgeInsets.only(right: kDefaultPadding),
+                padding: const EdgeInsets.only(right: kDefaultPaddingMd),
                 child: FeedbackCard(index: index),
               ),
             ),

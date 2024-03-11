@@ -34,8 +34,8 @@ class _SocialCardState extends State<SocialCard> {
         child: AnimatedContainer(
           duration: const Duration(microseconds: 200),
           padding: const EdgeInsets.symmetric(
-            vertical: kDefaultPadding / 20,
-            horizontal: kDefaultPadding * 4,
+            vertical: kDefaultPaddingMd / 20,
+            horizontal: kDefaultPaddingMd * 4,
           ),
           decoration: BoxDecoration(
             color: widget.color,
@@ -49,7 +49,7 @@ class _SocialCardState extends State<SocialCard> {
                 height: 80,
                 width: 80,
               ),
-              const SizedBox(width: kDefaultPadding),
+              const SizedBox(width: kDefaultPaddingMd),
               Text(widget.name!),
             ],
           ),
