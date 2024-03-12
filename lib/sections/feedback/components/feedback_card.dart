@@ -29,13 +29,13 @@ class _FeedbackCardState extends State<FeedbackCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-        margin: const EdgeInsets.only(top: kDefaultPadding * 3),
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        margin: const EdgeInsets.only(top: kDefaultPaddingMd * 3),
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddingMd),
         //tamanho de dentro do card
         height: 330,
         width: 300,
         decoration: BoxDecoration(
-          color: feedback[widget.index].color,
+          color: Colors.black26,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultShadow],
         ),
@@ -71,11 +71,11 @@ class _FeedbackCardState extends State<FeedbackCard> {
                     color: Colors.yellow[600], size: 20),
               ],
             ),
-                            const SizedBox(height: 15),
-
+            const SizedBox(height: 15),
             Text(
               feedback[widget.index].review!,
               style: const TextStyle(
+                color: Colors.black,
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
@@ -83,12 +83,13 @@ class _FeedbackCardState extends State<FeedbackCard> {
               ),
             ),
             const SizedBox(
-              height: kDefaultPadding,
+              height: kDefaultPaddingMd,
             ),
             Text(
               feedback[widget.index].name,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             )
           ],

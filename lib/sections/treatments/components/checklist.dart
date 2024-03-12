@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
+import 'package:web/sections/treatments/components/subtitle.dart';
 
 class CheckList extends StatelessWidget {
   const CheckList({super.key});
@@ -30,13 +31,9 @@ class CheckList extends StatelessWidget {
                     weight: 20,
                   ),
                   const SizedBox(width: 8),
-                  Text(
+                  Subtitle( 
+                    subtitle:
                     item,
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                    ),
                   ),
                 ],
               ),
@@ -52,6 +49,7 @@ class ChecklistAbout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     final List<String> itens = <String>[
       'Graduada em Odontologia (FMU)',
       'Especialista em Saúde Pública (UAM)',
@@ -79,8 +77,8 @@ class ChecklistAbout extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text(
                       item,
-                      style: const TextStyle(
-                        fontSize: 19,
+                      style:  TextStyle(
+                        fontSize: isMobile ? 15 : 19,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
                       ),

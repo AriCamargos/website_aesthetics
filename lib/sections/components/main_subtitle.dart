@@ -22,22 +22,20 @@ class MainSubtitle extends StatelessWidget {
         children: [
           Text(
             title,
-            textAlign: TextAlign.start,
+            textAlign: aligment,
             style: TextStyle(
               color: color,
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
+          const SizedBox(height: 10),
           Text(
             subtitle,
-            textAlign: TextAlign.start,
+            textAlign: aligment,
             style: TextStyle(
               color: color,
-              fontSize: 15,
+              fontSize: 12,
             ),
           ),
         ],
@@ -49,13 +47,11 @@ class MainSubtitle extends StatelessWidget {
             textAlign: TextAlign.start,
             style: TextStyle(
               color: color,
-              fontSize: 35,
+              fontSize: 25,
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
+          const SizedBox(height: 10),
           Text(
             subtitle,
             textAlign: TextAlign.start,
