@@ -10,7 +10,7 @@
             "type": "dart",
             "program": "lib/main.dart",
             "args":[
-                "--dart-define", "https://maps.googleapis.com/maps/api/js?key=AIzaSyBSntk2caGust8XCQixQxv5MQJZnbYzVZg"
+                "--dart-define"
             ]
         },
         {
