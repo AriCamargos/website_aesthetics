@@ -19,14 +19,9 @@ class _FeedbackCardState extends State<FeedbackCard> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      hoverColor: Colors.transparent,
-      onHover: (value) {
-        setState(() {
-          isHover = value;
-        });
-      },
+    return MouseRegion(
+      onEnter: (event) => _handerHover(true),
+      onExit: (event) => _handerHover(false),
       child: AnimatedContainer(
         duration: duration,
         margin: const EdgeInsets.only(top: kDefaultPaddingMd * 3),
@@ -35,7 +30,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         height: 330,
         width: 300,
         decoration: BoxDecoration(
-          color: Colors.black26,
+          color: Colors.blueGrey[50],
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultShadow],
         ),
@@ -96,5 +91,11 @@ class _FeedbackCardState extends State<FeedbackCard> {
         ),
       ),
     );
+  }
+
+  void _handerHover(bool hover) {
+    setState(() {
+      isHover = hover;
+    });
   }
 }

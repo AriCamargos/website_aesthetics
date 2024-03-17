@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web/components/whatsapp_button.dart';
+import 'package:web/components/whatsapp_button_soft.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/service.dart';
 import 'package:web/sections/components/main_title.dart';
@@ -11,7 +12,6 @@ class BenefitsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final response = Responsive(context);
     return Container(
       margin: const EdgeInsets.symmetric(vertical: kDefaultPaddingMd * 2),
@@ -31,8 +31,8 @@ class BenefitsSection extends StatelessWidget {
                     (service) => Column(
                       children: [
                         Container(
-                          height: 80,
-                          width: 80,
+                          height: 95,
+                          width: 95,
                           decoration: BoxDecoration(
                             color: kColorGold,
                             shape: BoxShape.circle,
@@ -46,29 +46,28 @@ class BenefitsSection extends StatelessWidget {
                           ),
                           child: Image.asset(
                             service.image,
-                            //errorBuilder: (context, error, stackTrace) => ,
                             filterQuality: FilterQuality.none,
                             height: 100,
                             width: 100,
                           ),
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 15),
                         Text(
                           service.title,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 23,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(height: 3),
+                        const SizedBox(height: 10),
                         Text(
                           service.subtitle,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
-                            fontSize: 14,
-                          ),
+                              fontSize: 17, fontWeight: FontWeight.w500),
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   )
@@ -85,7 +84,7 @@ class BenefitsSection extends StatelessWidget {
             ),
           }),
           const SizedBox(height: kDefaultPaddingMd * 2),
-          const WhatsappButton(),
+          const WhatsappButtonSoft(),
         ],
       ),
     );

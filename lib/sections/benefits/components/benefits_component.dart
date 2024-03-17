@@ -21,16 +21,16 @@ class _BenefitsComponentState extends State<BenefitsComponent> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: duration,
-      constraints: const BoxConstraints(maxWidth: 350), // Defina a largura máxima do cartão
-      height: 260,
+     // constraints: const BoxConstraints(maxWidth: 350), // Defina a largura máxima do cartão
+      height: 300,
       width: MediaQuery.of(context).size.width * 0.3, // Defina a largura do cartão como 30% da largura da tela
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           AnimatedContainer(
             padding: const EdgeInsets.all(kDefaultPaddingMd * 1.5),
-            height: 100,
-            width: 100,
+           // height: 150,
+           // width: 150,
             decoration: BoxDecoration(
               color: kColorGold,
               shape: BoxShape.circle,
@@ -46,8 +46,8 @@ class _BenefitsComponentState extends State<BenefitsComponent> {
             duration: duration,
             child: Image.asset(
               services[widget.index].image,
-              height: 100,
-              fit: BoxFit.cover,
+              height: 60,
+              fit: BoxFit.fill,
             ),
           ),
           Text(

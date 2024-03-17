@@ -24,20 +24,19 @@ class MainTitle extends StatelessWidget {
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
             color: Colors.black,
-            fontSize: isMobile ? 25 : 40,
+            fontSize:  35,
             fontWeight: FontWeight.w300,
           ),
         ),
-        const SizedBox(
-          height: 25,
-        ),
+        const SizedBox(height: 25),
         Text(
           subtitle,
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
-            fontSize: isMobile ? 15 : 17,
+            fontSize: isMobile ? kDefaultTextXs : kDefaultTextMd,
             fontWeight: FontWeight.w300,
+            
           ),
         ),
         Center(

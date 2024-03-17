@@ -20,6 +20,7 @@ class RecentWorkCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Image.asset(
           recentWork[index].image!,
@@ -29,6 +30,7 @@ class RecentWorkCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: kDefaultPaddingMd / 2),
                 MainSubtitle(

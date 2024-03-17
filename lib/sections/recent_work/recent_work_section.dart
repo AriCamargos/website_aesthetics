@@ -66,24 +66,27 @@ class RecentWorkSection extends StatelessWidget {
                     .toList(),
               ),
             ),
-            Breakpoints.md: GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: kDefaultPaddingMd,
-                mainAxisSpacing: kDefaultPaddingMd,
-                childAspectRatio: 2.5,
+            Breakpoints.md: Padding(
+              padding: const EdgeInsets.all(10),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: kDefaultPaddingMd,
+                  mainAxisSpacing: kDefaultPaddingMd,
+                  childAspectRatio: 2.5,
+                ),
+                itemCount: recentWork.length,
+                itemBuilder: (context, index) => RecentWorkCard(
+                  index: index,
+                  title: recentWork[index].title!,
+                  subtitle: recentWork[index].category!,
+                  image: recentWork[index].image!,
+                  // press: () {},
+                ),
               ),
-              itemCount: recentWork.length,
-              itemBuilder: (context, index) => RecentWorkCard(
-                index: index,
-                title: recentWork[index].title!,
-                subtitle: recentWork[index].category!,
-                image: recentWork[index].image!,
-                // press: () {},
-              ),
-            ),
+            )
           }),
         ],
       ),

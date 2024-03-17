@@ -9,7 +9,7 @@ class Questions {
 
 List<Questions> questions = [
   Questions(
-    title: 'Os tratamentos são seguros?',
+    title: 'Os tratamentos são seguros1111?',
     subtitle:
         'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
   ),
@@ -18,14 +18,14 @@ List<Questions> questions = [
     subtitle:
         'O tempo para ver os resultados depende do tratamento. Alguns mostram efeitos imediatos, enquanto outros podem levar algumas semanas.',
   ),
-  Questions(
+ /* Questions(
     title: 'Os tratamentos são seguros?',
     subtitle:
         'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
   ),
   Questions(
-    title: 'Os tratamentos são seguros?',
+    title: 'Os tratamentos são seguros1111?',
     subtitle:
         'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
-  ),
+  ),*/
 ];
