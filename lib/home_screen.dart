@@ -59,18 +59,18 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: scrollController,
         child: Column(
           children: [
-           /* if (!isMobile) TopSection(onMenuClick: _onMenuClick),
-            if (!isMobile) BannerList(pathToImages: bannerList),
+            if (!isMobile) TopSection(onMenuClick: _onMenuClick),
+            if (!isMobile) WebCarousel(pathToImages: bannerList),
             const SizedBox(height: kDefaultPaddingMd * 2),
-            TreatmentsSection(key: keySection1),*/
-            //const RecentWorkSection(),
+            TreatmentsSection(key: keySection1),
+            const RecentWorkSection(),
             const BenefitsSection(),
             if (!isMobile) const FeedbackSection(),
-           /* AboutSection(key: keySection2),
+            AboutSection(key: keySection2),
             QuestionsSection(questions: questions),
-            *MapSection(key: keySection3),
+            MapSection(key: keySection3),
             const SizedBox(height: 50),
-            const FooterSection(),*/
+            const FooterSection(),
           ],
         ),
       ),
