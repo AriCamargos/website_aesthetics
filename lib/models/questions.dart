@@ -9,7 +9,7 @@ class Questions {
 
 List<Questions> questions = [
   Questions(
-    title: 'Os tratamentos são seguros1111?',
+    title: 'Os tratamentos são seguros? Existem riscos envolvidos?',
     subtitle:
         'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
   ),
@@ -18,14 +18,14 @@ List<Questions> questions = [
     subtitle:
         'O tempo para ver os resultados depende do tratamento. Alguns mostram efeitos imediatos, enquanto outros podem levar algumas semanas.',
   ),
- /* Questions(
-    title: 'Os tratamentos são seguros?',
+  Questions(
+    title: 'Os tratamentos são adequados para todas as idades e tipos de pele?',
     subtitle:
-        'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
+        'Sim, nossos tratamentos abrangem diversas idades e tipos de pele, garantindo eficácia e segurança em cada sessão.',
   ),
   Questions(
-    title: 'Os tratamentos são seguros1111?',
+    title: 'Quais são os cuidados para manter os resultados por mais tempo?',
     subtitle:
-        'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
-  ),*/
+        'Proteja sua pele com protetor solar diariamente, hidrate e siga as orientações passadas após o procedimento para manter os resultados de maneira duradoura.',
+  ),
 ];
