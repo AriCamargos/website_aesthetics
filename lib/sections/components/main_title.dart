@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:web/constants.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
 
@@ -19,26 +18,19 @@ class MainTitle extends StatelessWidget {
 
     return Column(
       children: [
-        Text(
-          title.toUpperCase(),
-          textAlign: TextAlign.center,
-          style: GoogleFonts.openSans(
-            color: Colors.black,
-            fontSize:  35,
-            fontWeight: FontWeight.w300,
-          ),
-        ),
+        Text(title.toUpperCase(),
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headlineLarge),
         const SizedBox(height: 25),
-        Text(
-          subtitle,
-          textAlign: TextAlign.center,
-          style: TextStyle(
+        Text(subtitle,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleMedium
+            /* TextStyle(
             color: Colors.black,
             fontSize: isMobile ? kDefaultTextXs : kDefaultTextMd,
             fontWeight: FontWeight.w300,
-            
-          ),
-        ),
+          ),*/
+            ),
         Center(
           child: responsive.value(
             {
