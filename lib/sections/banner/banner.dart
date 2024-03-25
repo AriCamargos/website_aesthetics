@@ -3,18 +3,20 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:loop_page_view/loop_page_view.dart';
-class BannerList extends StatefulWidget {
+
+class WebCarousel extends StatefulWidget {
   final List<String> pathToImages;
 
-  const BannerList({super.key, 
+  const WebCarousel({
+    Key? key,
     required this.pathToImages,
-  }) ;
+  }) : super(key: key);
 
   @override
-  State<BannerList> createState() => _CarouselState();
+  State<WebCarousel> createState() => _CarouselState();
 }
 
-class _CarouselState extends State<BannerList> {
+class _CarouselState extends State<WebCarousel> {
   int activePage = 1;
   late LoopPageController _pageController;
   late Timer _timer;
@@ -27,19 +29,22 @@ class _CarouselState extends State<BannerList> {
       initialPage: 1,
     );
     // ignore: prefer-extracting-callbacks
-    _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
-      if (activePage < 5) {
-        activePage++;
-      } else {
-        activePage = 0;
-      }
+    _timer = Timer.periodic(
+      const Duration(seconds: 5),
+      (Timer timer) {
+        if (activePage < 5) {
+          activePage++;
+        } else {
+          activePage = 0;
+        }
 
-      _pageController.animateToPage(
-        activePage,
-        duration: const Duration(milliseconds: 350),
-        curve: Curves.easeIn,
-      );
-    },);
+        _pageController.animateToPage(
+          activePage,
+          duration: const Duration(milliseconds: 350),
+          curve: Curves.easeIn,
+        );
+      },
+    );
   }
 
   @override
@@ -48,7 +53,10 @@ class _CarouselState extends State<BannerList> {
     _timer.cancel();
   }
 
-  List<Widget> indicators(int imagesLength, int currentIndex,) {
+  List<Widget> indicators(
+    int imagesLength,
+    int currentIndex,
+  ) {
     return List<Widget>.generate(
       imagesLength,
       // ignore: prefer-extracting-callbacks
@@ -58,7 +66,7 @@ class _CarouselState extends State<BannerList> {
           width: 10,
           height: 10,
           decoration: BoxDecoration(
-            color: currentIndex == index ? Colors.red[300] : Colors.red[100],
+            color: currentIndex == index ? Colors.blue : Colors.lightBlueAccent,
             shape: BoxShape.circle,
           ),
         );
@@ -92,7 +100,11 @@ class _CarouselState extends State<BannerList> {
     );
   }
 
-  AnimatedContainer slider(List<String> images, int pagePosition, bool active,) {
+  AnimatedContainer slider(
+    List<String> images,
+    int pagePosition,
+    bool active,
+  ) {
     final double margin = active ? 10 : 20;
 
     return AnimatedContainer(
@@ -150,4 +162,3 @@ class _CarouselState extends State<BannerList> {
     );
   }
 }
-
