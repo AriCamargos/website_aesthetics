@@ -45,35 +45,33 @@ Oferecemos uma grande variedade de tratamentos, confira alguns:''',
               ),
             ),
             Breakpoints.md: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        '/images/woman_seat.jpg',
-                        alignment: Alignment.centerRight,
-                        height: 500,
-                        fit: BoxFit.cover,
-                      ),
-                    ],
-                  ),
+                Image.asset(
+                  '/images/woman_seat.jpg',
+                  alignment: Alignment.centerRight,
+                  height: 500,
+                  fit: BoxFit.cover,
                 ),
                 const SizedBox(width: 15),
-                const Expanded(
+                Flexible(
                   child: Column(
                     children: [
-                      TreatmentsSectionText(
-                        align: TextAlign.right,
-                        title: 'Como funcionam os tratamentos?',
-                        subtitle:
-                            '''Cuidadosamente personalizados para as necessidades de cada cliente, utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.
-                      
-Todos os nossos procedimentos visam resultados duradouros através de técnicas validadas e produtos de marcas conhecidas.
-                                
-Oferecemos uma grande variedade de tratamentos, confira alguns:''',
+                      Text(
+                        'Como funcionam os tratamentos?',
+                        style: Theme.of(context).textTheme.displaySmall,
+                        textAlign: TextAlign.left,
                       ),
-                      SizedBox(height: 15),
-                      CheckList(),
+                      const Text(
+                        'Cuidadosamente personalizados para as necessidades de cada cliente, utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.'
+                        'Todos os nossos procedimentos visam resultados duradouros através de técnicas validadas e produtos de marcas conhecidas.'
+                        'Oferecemos uma grande variedade de tratamentos, confira alguns: ',
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      const CheckList(),
                     ],
                   ),
                 ),

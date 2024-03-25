@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:web/components/whatsapp_button.dart';
 import 'package:web/components/whatsapp_button_soft.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/service.dart';
@@ -73,13 +72,30 @@ class BenefitsSection extends StatelessWidget {
                   )
                   .toList(),
             ),
-            Breakpoints.md: Wrap(
+            /* Breakpoints.md: Wrap(
               alignment: WrapAlignment.spaceBetween,
               spacing: 20,
               runSpacing: 20,
               children: List.generate(
                 services.length,
                 (index) => BenefitsComponent(index: index),
+              ),
+            ),*/
+            Breakpoints.lg: SizedBox(
+              height: 600,
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 20,
+                ),
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: services.length,
+                itemBuilder: (context, index) => BenefitsComponent(
+                  index: index,
+                  title: services[index].title,
+                  subtitle: services[index].subtitle,
+                  image: services[index].image,
+                ),
               ),
             ),
           }),

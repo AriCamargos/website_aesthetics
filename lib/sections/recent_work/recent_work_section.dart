@@ -13,12 +13,14 @@ class RecentWorkSection extends StatelessWidget {
     final responsive = Responsive(context);
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPaddingMd * 3),
       decoration: BoxDecoration(
         color: const Color(0xFFF7E8FF).withOpacity(0.3),
-        image: const DecorationImage(
+        image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('images/recent_work_bg.png'),
+          image: Image.asset(
+            '/images/recent_work_bg.png',
+            width: 10,
+          ).image,
         ),
       ),
       child: Column(
@@ -52,13 +54,10 @@ class RecentWorkSection extends StatelessWidget {
                                 fontSize: 18,
                               ),
                             ),
-                            Text(
-                              work.category!,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
+                            Text(work.category!,
+                                textAlign: TextAlign.center,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium),
                           ],
                         ),
                       ),
@@ -67,14 +66,14 @@ class RecentWorkSection extends StatelessWidget {
               ),
             ),
             Breakpoints.md: Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(100),
               child: GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: kDefaultPaddingMd,
-                  mainAxisSpacing: kDefaultPaddingMd,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
                   childAspectRatio: 2.5,
                 ),
                 itemCount: recentWork.length,
@@ -86,7 +85,28 @@ class RecentWorkSection extends StatelessWidget {
                   // press: () {},
                 ),
               ),
-            )
+            ),
+            Breakpoints.lg: Padding(
+              padding: const EdgeInsets.all(220.0),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 2.5,
+                ),
+                itemCount: recentWork.length,
+                itemBuilder: (context, index) => RecentWorkCard(
+                  index: index,
+                  title: recentWork[index].title!,
+                  subtitle: recentWork[index].category!,
+                  image: recentWork[index].image!,
+                  // press: () {},
+                ),
+              ),
+            ),
           }),
         ],
       ),

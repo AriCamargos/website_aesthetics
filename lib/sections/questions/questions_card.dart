@@ -12,23 +12,15 @@ class QuestionsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Duration duration = const Duration(milliseconds: 200);
-    return AnimatedContainer(
-    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      decoration: const BoxDecoration(
-        color: Colors.black26,
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20.0),
+      decoration: BoxDecoration(
+        color: Colors.blueGrey[50],
       ),
-      duration: duration,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          MainSubtitle(
-            title: title ?? '',
-            //alignment: TextAlign.start,
-            subtitle: subtitle ?? '',
-            color: Colors.black,
-          ),
-        ],
+      child: MainSubtitle(
+        title: title ?? '',
+        subtitle: subtitle ?? '',
+        color: Colors.black,
       ),
     );
   }

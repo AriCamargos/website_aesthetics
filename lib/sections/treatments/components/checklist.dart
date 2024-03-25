@@ -31,9 +31,8 @@ class CheckList extends StatelessWidget {
                     weight: 20,
                   ),
                   const SizedBox(width: 8),
-                  Subtitle( 
-                    subtitle:
-                    item,
+                  Subtitle(
+                    subtitle: item,
                   ),
                 ],
               ),
@@ -59,35 +58,33 @@ class ChecklistAbout extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.zero,
-      child: Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (var item in itens)
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.check,
-                      color: kColorGold,
-                      size: 30,
-                      weight: 30,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var item in itens)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.check,
+                    color: kColorGold,
+                    size: 30,
+                    weight: 30,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    item,
+                    style: TextStyle(
+                      fontSize: isMobile ? 15 : 19,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      item,
-                      style:  TextStyle(
-                        fontSize: isMobile ? 15 : 19,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-          ],
-        ),
+            ),
+        ],
       ),
     );
   }

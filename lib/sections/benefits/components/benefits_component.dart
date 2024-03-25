@@ -4,9 +4,15 @@ import '../../../models/service.dart';
 
 class BenefitsComponent extends StatefulWidget {
   final int index;
+  final String title;
+  final String subtitle;
+  final String image;
   const BenefitsComponent({
     Key? key,
     required this.index,
+    required this.title,
+    required this.subtitle,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -16,21 +22,19 @@ class BenefitsComponent extends StatefulWidget {
 class _BenefitsComponentState extends State<BenefitsComponent> {
   bool isHover = false;
   Duration duration = const Duration(milliseconds: 200);
-  
+
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: duration,
-     // constraints: const BoxConstraints(maxWidth: 350), // Defina a largura máxima do cartão
-      height: 300,
-      width: MediaQuery.of(context).size.width * 0.3, // Defina a largura do cartão como 30% da largura da tela
+      // constraints: const BoxConstraints(maxWidth: 350), // Defina a largura máxima do cartão
+      width: MediaQuery.of(context).size.width *
+          0.3, // Defina a largura do cartão como 30% da largura da tela
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           AnimatedContainer(
             padding: const EdgeInsets.all(kDefaultPaddingMd * 1.5),
-           // height: 150,
-           // width: 150,
             decoration: BoxDecoration(
               color: kColorGold,
               shape: BoxShape.circle,
@@ -50,16 +54,20 @@ class _BenefitsComponentState extends State<BenefitsComponent> {
               fit: BoxFit.fill,
             ),
           ),
-          Text(
-            services[widget.index].title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 22),
-          ),
-          Center(
-            child: Text(
-              services[widget.index].subtitle,
-            textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 15, wordSpacing: 2),
+          Flexible(
+            child: Column(
+              children: [
+                Text(
+                  services[widget.index].title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 22),
+                ),
+                Text(
+                  services[widget.index].subtitle,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 15, wordSpacing: 2),
+                ),
+              ],
             ),
           ),
         ],
