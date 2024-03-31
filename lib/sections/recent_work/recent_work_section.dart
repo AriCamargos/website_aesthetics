@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web/models/recent_work.dart';
 import 'package:web/sections/components/main_title.dart';
-import '../../constants.dart';
 import 'components/recent_work_card.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
 
@@ -27,12 +25,12 @@ class RecentWorkSection extends StatelessWidget {
         children: [
           const SizedBox(height: 30),
           const MainTitle(
-            title: 'TRATAMENTOS FULL FACE',
+            title: 'TRATAMENTOS',
             subtitle:
                 'Nossos principais tratamentos atuam no rejuvenescimento de todas as belezas',
           ),
           responsive.value({
-            Breakpoints.xs: SizedBox(
+            /*Breakpoints.xs: SizedBox(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: recentWork
@@ -64,29 +62,24 @@ class RecentWorkSection extends StatelessWidget {
                     )
                     .toList(),
               ),
-            ),
-            Breakpoints.md: Padding(
-              padding: const EdgeInsets.all(100),
-              child: GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  childAspectRatio: 2.5,
-                ),
-                itemCount: recentWork.length,
-                itemBuilder: (context, index) => RecentWorkCard(
-                  index: index,
-                  title: recentWork[index].title!,
-                  subtitle: recentWork[index].category!,
-                  image: recentWork[index].image!,
-                  // press: () {},
-                ),
+            ),*/
+            Breakpoints.md: const Padding(
+              padding: EdgeInsets.all(100),
+              child: SingleChildScrollView(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      RecentWorkCard(),
+                      SizedBox(width: 15.0),
+                      RecentWorkCard(),
+                      SizedBox(width: 15.0),
+                      RecentWorkCard(),
+                    ]),
               ),
             ),
-            Breakpoints.lg: Padding(
+
+            /* Breakpoints.lg: Padding(
               padding: const EdgeInsets.all(220.0),
               child: GridView.builder(
                 shrinkWrap: true,
@@ -106,7 +99,7 @@ class RecentWorkSection extends StatelessWidget {
                   // press: () {},
                 ),
               ),
-            ),
+            ),*/
           }),
         ],
       ),
