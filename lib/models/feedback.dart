@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-class Feedback extends MaterialScrollBehavior {
+class Feedback {
   final String name;
   final String? review;
   final String? userPic;
@@ -22,6 +20,18 @@ List<Feedback> feedback = [
   ),
   Feedback(
     id: 2,
+    name: 'Antonela Miranda',
+    review: review,
+    userPic: 'assets/images/people.png',
+  ),
+  Feedback(
+    id: 3,
+    name: 'Antonela Miranda',
+    review: review,
+    userPic: 'assets/images/people.png',
+  ),
+  Feedback(
+    id: 3,
     name: 'Antonela Miranda',
     review: review,
     userPic: 'assets/images/people.png',
