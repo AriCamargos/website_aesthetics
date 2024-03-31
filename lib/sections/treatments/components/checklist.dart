@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
+import 'package:web/models/first_consultation.dart';
 import 'package:web/sections/treatments/components/subtitle.dart';
 
 class CheckList extends StatelessWidget {
@@ -7,32 +8,25 @@ class CheckList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> itens = <String>[
-      'Harmonização Facial',
-      'Preenchimento Facial e Labial',
-      'Aplicação de Toxina Botulínica',
-      'Ultrassom Microfocado (Ultraformer)',
-    ];
-
     return Padding(
       padding: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          for (var item in itens)
+          for (var firstConsultation in firstConsultation)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.check,
-                    color: kColorGold,
-                    size: 20,
-                    weight: 20,
+                  Text(
+                    firstConsultation.number,
+                    style: const TextStyle(fontSize: 50),
                   ),
                   const SizedBox(width: 8),
-                  Subtitle(
-                    subtitle: item,
+                  Flexible(
+                    child: Subtitle(
+                      subtitle: firstConsultation.title,
+                    ),
                   ),
                 ],
               ),

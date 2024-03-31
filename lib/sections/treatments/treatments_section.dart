@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
+import 'package:web/sections/components/main_title.dart';
 import 'components/checklist.dart';
 import 'components/treatments_section_text.dart';
 
@@ -18,21 +19,12 @@ class TreatmentsSection extends StatelessWidget {
         children: [
           const SizedBox(height: kDefaultPaddingMd * 2),
           responsive.value({
-            Breakpoints.xs: Padding(
+            /*Breakpoints.xs: Padding(
               padding: kSizePageXs,
               child: Column(
                 children: [
-                  const TreatmentsSectionText(
-                    align: TextAlign.center,
-                    title: 'Como Funcionam os Tratamentos?',
-                    subtitle:
-                        '''Cuidadosamente personalizados para as necessidades de cada cliente, utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.
-
-Todos os nossos procedimentos visam resultados duradouros através de técnicas validadas e produtos de marcas conhecidas.
-                          
-Oferecemos uma grande variedade de tratamentos, confira alguns:''',
-                  ),
-                  const SizedBox(height: 12),
+                  Text('Como funciona a '),
+                  Text('Primeira Consulta'),
                   const CheckList(),
                   const SizedBox(height: 12),
                   Image.asset(
@@ -43,35 +35,41 @@ Oferecemos uma grande variedade de tratamentos, confira alguns:''',
                   ),
                 ],
               ),
-            ),
+            ),*/
             Breakpoints.md: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  '/images/woman_seat.jpg',
+                  '/images/rai_photo.jpg',
                   alignment: Alignment.centerRight,
-                  height: 500,
-                  fit: BoxFit.cover,
+                  height: 700,
+                  //fit: BoxFit.cover,
                 ),
-                const SizedBox(width: 15),
-                Flexible(
+                const SizedBox(width: 40),
+                const Flexible(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
+                      /*Text(
                         'Como funcionam os tratamentos?',
                         style: Theme.of(context).textTheme.displaySmall,
                         textAlign: TextAlign.left,
+                      ),*/
+                      MainTitle(
+                        title: 'Primeira Consulta',
+                        subtitle: 'Como funciona?',
                       ),
-                      const Text(
-                        'Cuidadosamente personalizados para as necessidades de cada cliente, utilizamos a associação de diversas técnicas para alcançarmos a beleza rejuvenescida desejada.'
-                        'Todos os nossos procedimentos visam resultados duradouros através de técnicas validadas e produtos de marcas conhecidas.'
-                        'Oferecemos uma grande variedade de tratamentos, confira alguns: ',
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
+                      /*Text(
+                        'Como funciona a ',
+                        style: TextStyle(fontSize: 15),
                       ),
-                      const SizedBox(height: 15),
-                      const CheckList(),
+                      Text(
+                        'Primeira Consulta',
+                        style: TextStyle(fontSize: 20),
+                      ),*/
+                      SizedBox(height: 15),
+                      CheckList(),
                     ],
                   ),
                 ),
