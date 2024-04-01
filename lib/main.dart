@@ -14,21 +14,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          inputDecorationTheme: kDefaultInputDecorationTheme,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          primarySwatch: Colors.orange,
-          textTheme: _buildTheme()),
+        inputDecorationTheme: kDefaultInputDecorationTheme,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.orange,
+        textTheme: _buildTheme(),
+      ),
       home: const HomeScreen(),
     );
   }
 }
 
 TextTheme _buildTheme() {
-  var baseTheme = GoogleFonts.quicksandTextTheme();
+  var baseTheme = GoogleFonts.fahkwangTextTheme();
+
 
   baseTheme.copyWith(
-    bodyLarge: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10),
-    headlineLarge: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+    bodyLarge: const TextStyle(
+        fontWeight: FontWeight.w400, fontSize: 10, color: Colors.white),
+    headlineLarge: const TextStyle(
+        fontWeight: FontWeight.w500, fontSize: 16, color: kColorGold),
   );
 
   return baseTheme;
