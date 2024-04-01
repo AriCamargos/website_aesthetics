@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/first_consultation.dart';
 import 'package:web/sections/treatments/components/subtitle.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class CheckList extends StatelessWidget {
   const CheckList({super.key});
 
@@ -20,9 +21,9 @@ class CheckList extends StatelessWidget {
                 children: [
                   Text(
                     firstConsultation.number,
-                    style: const TextStyle(fontSize: 50),
+                    style: const TextStyle(fontSize: 50, color: kColorGold),
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 12),
                   Flexible(
                     child: Subtitle(
                       subtitle: firstConsultation.title,
@@ -72,7 +73,7 @@ class ChecklistAbout extends StatelessWidget {
                     style: TextStyle(
                       fontSize: isMobile ? 15 : 19,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ],

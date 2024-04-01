@@ -19,26 +19,30 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
     return Container(
       color: const Color(0xFF18191B),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 60),
+        padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 90),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Preenchimento'.toUpperCase(),
-              style: const TextStyle(color: kColorGold, fontSize: 25),
+              style: const TextStyle(color: kColorGold, fontSize: 30),
             ),
             const SizedBox(
               height: 20,
             ),
             for (var treatmentsList in treatmentsList)
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const Icon(Icons.stars_rounded, color: kColorGold),
-                  const SizedBox(width: 10),
+                  const SizedBox(width: 12),
                   Text(
                     treatmentsList.item,
-                    style: const TextStyle(color: Colors.white),
+                    textAlign: TextAlign.start,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
                   ),
                 ],
               ),

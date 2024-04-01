@@ -21,7 +21,7 @@ class Subtitle extends StatelessWidget {
             style:  TextStyle(
               fontSize: isMobile ? 15 : 16,
               fontWeight: FontWeight.w500,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ],

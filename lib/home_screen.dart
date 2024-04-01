@@ -69,7 +69,6 @@ class _HomeScreenState extends State<HomeScreen> {
             AboutSection(key: keySection2),
             QuestionsSection(questions: questions),
             MapSection(key: keySection3),
-            const SizedBox(height: 50),
             const FooterSection(),
           ],
         ),

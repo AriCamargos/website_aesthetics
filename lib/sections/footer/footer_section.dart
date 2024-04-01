@@ -13,55 +13,97 @@ class FooterSection extends StatelessWidget {
     final responsive = Responsive(context);
 
     return Container(
-      constraints: const BoxConstraints(maxWidth: double.infinity),
-      decoration: const BoxDecoration(
-        color: Colors.black87,
-      ),
+      color: Colors.black,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset(
-              'assets/images/logologo.png',
-              width: 300,
-              height: 300,
-              fit: BoxFit.fitWidth,
+            Expanded(
+              child: Image.asset(
+                'assets/images/logologo.png',
+                height: 150,
+                width: 150,
+                fit: BoxFit.fitHeight,
+              ),
             ),
-            const Text(
-              'Me siga nas redes sociais: ',
-              style: TextStyle(color: kColorGold),
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () => openInstagram(),
-                  icon: const FaIcon(
-                    FontAwesomeIcons.instagram,
-                    size: 40,
-                    color: kColorGold,
+            Expanded(
+              child: Column(
+                children: [
+                  const Text(
+                    'Siga nas redes sociais: ',
+                    style: TextStyle(color: kColorGold),
                   ),
-                ),
-                IconButton(
-                  onPressed: () => openFacebook(),
-                  icon: const FaIcon(
-                    FontAwesomeIcons.facebook,
-                    size: 40,
-                    color: kColorGold,
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () => openInstagram(),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.instagram,
+                          size: 40,
+                          color: kColorGold,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () => openFacebook(),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.facebook,
+                          size: 40,
+                          color: kColorGold,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                  const Column(
+                    children: [
+                      SizedBox(height: 20),
+                      Text(
+                        'Política de Privacidade',
+                        style: TextStyle(color: kColorGold),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-            const SizedBox(height: 20),
-            const Text(
-              'Política de Privacidade',
-              style: TextStyle(color: kColorGold),
+            const SizedBox(width: 20),
+            const Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    'Links rápidos',
+                    style: TextStyle(color: kColorGold),
+                  ),
+                  Text(
+                    'ooi',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    'oooi',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 20),
             const Divider(
               color: kColorGold,
             ),
+            /*Text(
+              '''@ 2024 Copyright Dra. Raissa. Todos os direitos reservados.''',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 12),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              'Desenvolvido por ...',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 12),
+            )*/
             /* const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -75,7 +117,7 @@ class FooterSection extends StatelessWidget {
                 )
               ],
             ),*/
-            responsive.value({
+            /*responsive.value({
               Breakpoints.xs: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,7 +140,7 @@ class FooterSection extends StatelessWidget {
                   )
                 ],
               ),
-            }),
+            }),*/
           ],
         ),
       ),

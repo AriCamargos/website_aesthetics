@@ -60,12 +60,13 @@ class _BenefitsComponentState extends State<BenefitsComponent> {
                 Text(
                   services[widget.index].title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 22),
+                  style: const TextStyle(fontSize: 22, color: Colors.white),
                 ),
                 Text(
                   services[widget.index].subtitle,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 15, wordSpacing: 2),
+                  style: const TextStyle(
+                      fontSize: 15, wordSpacing: 2, color: Colors.white),
                 ),
               ],
             ),

@@ -42,25 +42,27 @@ class MainSubtitle extends StatelessWidget {
       ),*/
         // Breakpoints.md:
         Column(children: [
-      Text(
-        title,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          color: color,
-          fontSize: 25,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-      const SizedBox(height: 10),
-      Text(
-        subtitle,
-        textAlign: TextAlign.start,
-        style: TextStyle(
-          color: color,
-          fontSize: 15,
-        ),
-      ),
-    ]);
+          Flexible(
+            child: Text(
+              title,
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: color,
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            subtitle,
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              color: color,
+              fontSize: 15,
+            ),
+          ),
+        ]);
 
     //),
     //  });

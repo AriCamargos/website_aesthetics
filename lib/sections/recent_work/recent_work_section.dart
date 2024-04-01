@@ -12,14 +12,15 @@ class RecentWorkSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color(0xFFF7E8FF).withOpacity(0.3),
-        image: DecorationImage(
+        color:  Colors.black
+        //.withOpacity(0.3),
+       /* image: DecorationImage(
           fit: BoxFit.cover,
           image: Image.asset(
             '/images/recent_work_bg.png',
             width: 10,
           ).image,
-        ),
+        ),*/
       ),
       child: Column(
         children: [
@@ -68,7 +69,6 @@ class RecentWorkSection extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       RecentWorkCard(),
                       SizedBox(width: 15.0),

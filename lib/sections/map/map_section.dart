@@ -10,23 +10,28 @@ class MapSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     return Container(
-      padding: isMobile
-          ? const EdgeInsets.symmetric(horizontal: kDefaultPaddingXs)
-          : const EdgeInsets.symmetric(vertical: kDefaultPaddingXs),
-      constraints: const BoxConstraints(maxWidth: 1110),
-      child: Column(
-        children: [
-          MainTitle(
-            title: 'Onde estamos'.toUpperCase(),
-            subtitle: 'Av Benedito Alves Turíbio 1838 - Padroeira II - Osasco - São Paulo',
-          ),
-          const SizedBox(height: 10),
-          const Column(
-            children: [
-              MapScreen(),
-            ],
-          ),
-        ],
+      color: const Color(0xFF18191B),
+      // padding: isMobile
+      //   ? const EdgeInsets.symmetric(horizontal: kDefaultPaddingXs)
+      // : const EdgeInsets.symmetric(vertical: kDefaultPaddingXs),
+      //constraints: const BoxConstraints(maxWidth: 1110),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 300),
+        child: Column(
+          children: [
+            MainTitle(
+              title: 'Onde estamos'.toUpperCase(),
+              subtitle:
+                  'Av Benedito Alves Turíbio 1838 - Padroeira II - Osasco - São Paulo',
+            ),
+            const SizedBox(height: 10),
+            const Column(
+              children: [
+                MapScreen(),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

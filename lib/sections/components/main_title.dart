@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
-
 class MainTitle extends StatelessWidget {
   final String title;
   final String subtitle;
@@ -15,16 +14,19 @@ class MainTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     final responsive = Responsive(context);
+    var theme = Theme.of(context).textTheme;
 
     return Column(
       children: [
-        Text(title.toUpperCase(),
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineLarge),
+        Text(
+          title.toUpperCase(),
+          textAlign: TextAlign.center,
+          style: theme.headlineLarge!.copyWith(color: kColorGold),
+        ),
         const SizedBox(height: 25),
         Text(subtitle,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.titleMedium
+            style:theme.titleMedium!.copyWith(color: Colors.white)
             /* TextStyle(
             color: Colors.black,
             fontSize: isMobile ? kDefaultTextXs : kDefaultTextMd,

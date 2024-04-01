@@ -14,13 +14,13 @@ class QuestionsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20.0),
-      decoration: BoxDecoration(
-        color: Colors.blueGrey[50],
+      decoration: const BoxDecoration(
+      color: Color(0xFF18191B),
       ),
       child: MainSubtitle(
         title: title ?? '',
         subtitle: subtitle ?? '',
-        color: Colors.black,
+        color: Colors.white,
       ),
     );
   }
