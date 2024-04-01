@@ -16,10 +16,11 @@ const double kMdBreakpoint =
 const double kXsBreakpoint =
     480; // Valor em pixels que representa a largura da tela para dispositivos extra pequenos (móveis)
 
-final kDefaultShadow = BoxShadow(
-  offset: const Offset(0, 10),
+const kDefaultShadow = BoxShadow(
+  offset: Offset(3, 3),
   blurRadius: 20,
-  color: Colors.black.withOpacity(0.20),
+  blurStyle: BlurStyle.normal,
+  color: kColorGold,
 );
 
 final kDefaultShadowMap = BoxShadow(
