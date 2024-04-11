@@ -48,4 +48,3 @@ List<TreatmentsList> treatmentsList = [
     icon: const Icon(Icons.star_rate_rounded),
   ),
 ];
-
