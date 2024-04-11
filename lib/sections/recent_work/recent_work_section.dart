@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:web/models/bioestimulators_list.dart';
+import 'package:web/models/filler_list.dart';
+import 'package:web/models/treatments_list.dart';
 import 'package:web/sections/components/main_title.dart';
 import 'components/recent_work_card.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
@@ -11,17 +14,16 @@ class RecentWorkSection extends StatelessWidget {
     final responsive = Responsive(context);
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
-        color:  Colors.black
-        //.withOpacity(0.3),
-       /* image: DecorationImage(
+      decoration: const BoxDecoration(color: Colors.black
+          //.withOpacity(0.3),
+          /* image: DecorationImage(
           fit: BoxFit.cover,
           image: Image.asset(
             '/images/recent_work_bg.png',
             width: 10,
           ).image,
         ),*/
-      ),
+          ),
       child: Column(
         children: [
           const SizedBox(height: 30),
@@ -64,18 +66,31 @@ class RecentWorkSection extends StatelessWidget {
                     .toList(),
               ),
             ),*/
-            Breakpoints.md: const Padding(
-              padding: EdgeInsets.all(100),
+            Breakpoints.md: Padding(
+              padding: const EdgeInsets.all(100),
               child: SingleChildScrollView(
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      RecentWorkCard(),
-                      SizedBox(width: 15.0),
-                      RecentWorkCard(),
-                      SizedBox(width: 15.0),
-                      RecentWorkCard(),
-                    ]),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  RecentWorkCard(
+                    title: 'Preenchimento',
+                    listOptions:
+                        treatmentsList.map((item) => item.item).toList(),
+                    icons: Icons.stars_rounded,
+                  ),
+                  const SizedBox(width: 15.0),
+                  RecentWorkCard(
+                    title: 'Bioestimuladores',
+                    listOptions:
+                        bioestimulatorsList.map((e) => e.item).toList(),
+                    icons: Icons.bolt_outlined,
+                  ),
+                  const SizedBox(width: 15.0),
+                  RecentWorkCard(
+                    title: 'Botox',
+                    listOptions: fillerList.map((e) => e.item).toList(),
+                    icons: Icons.favorite_outlined,
+                  ),
+                ]),
               ),
             ),
 

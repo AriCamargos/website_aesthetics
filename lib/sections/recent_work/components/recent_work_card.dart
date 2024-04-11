@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
-import 'package:web/models/treatments_list.dart';
 
-class RecentWorkCard extends StatefulWidget {
+class RecentWorkCard extends StatelessWidget {
+  final String title;
+  final List<String> listOptions;
+  final IconData? icons;
   const RecentWorkCard({
-    super.key,
+    super.key, required this.title, required this.listOptions, required this.icons,
   });
 
-  get index => null;
-
-  @override
-  State<RecentWorkCard> createState() => _RecentWorkCardState();
-}
-
-class _RecentWorkCardState extends State<RecentWorkCard> {
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,19 +21,19 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Preenchimento'.toUpperCase(),
+              title.toUpperCase(),
               style: const TextStyle(color: kColorGold, fontSize: 30),
             ),
             const SizedBox(
               height: 20,
             ),
-            for (var treatmentsList in treatmentsList)
+            for (var item in listOptions)
               Row(
                 children: [
-                  const Icon(Icons.stars_rounded, color: kColorGold),
+                  Icon(icons  , color: kColorGold),
                   const SizedBox(width: 12),
                   Text(
-                    treatmentsList.item,
+                    item,
                     textAlign: TextAlign.start,
                     style: const TextStyle(
                       color: Colors.white,
