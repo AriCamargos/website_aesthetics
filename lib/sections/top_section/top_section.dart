@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web/constants.dart';
+import 'package:web/sections/footer/menu_button.dart';
 
 class TopSection extends StatelessWidget {
   final ValueChanged<int> onMenuClick;
@@ -9,10 +9,18 @@ class TopSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        boxShadow: [kDefaultShadow],
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(5.0, 3.9),
+            blurRadius: 50,
+            blurStyle: BlurStyle.normal,
+            color: Colors.white,
+          )
+        ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -31,26 +39,44 @@ class TopSection extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              buildMenuButton('Tratamentos', 1),
-              buildMenuButton('Dra Raissa', 2),
-              buildMenuButton('Localização', 3),
-              buildMenuButton('Contato', 4),
+              MenuButton(
+                text: 'Home',
+                number: 1,
+                colors: Colors.black,
+                onPressed: () => onMenuClick(1),
+                fontSize: 20,
+              ),
+              MenuButton(
+                text: 'Tratamentos',
+                number: 2,
+                colors: Colors.black,
+                onPressed: () => onMenuClick(2),
+                fontSize: 20,
+              ),
+              MenuButton(
+                text: 'Procedimentos',
+                number: 3,
+                colors: Colors.black,
+                onPressed: () => onMenuClick(3),
+                fontSize: 20,
+              ),
+              MenuButton(
+                text: 'Dra Raissa',
+                number: 4,
+                colors: Colors.black,
+                onPressed: () => onMenuClick(4),
+                fontSize: 20,
+              ),
+              MenuButton(
+                text: 'Localização',
+                number: 5,
+                colors: Colors.black,
+                onPressed: () => onMenuClick(5),
+                fontSize: 20,
+              ),
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Widget buildMenuButton(String text, int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: TextButton(
-        onPressed: () => onMenuClick(index),
-        child: Text(
-          text,
-          style: const TextStyle(fontSize: 15, color: kColorGold),
-        ),
       ),
     );
   }
