@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web/constants.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
+
 class MainTitle extends StatelessWidget {
   final String title;
   final String subtitle;

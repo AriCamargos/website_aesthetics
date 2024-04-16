@@ -17,7 +17,7 @@ class QuestionsSection extends StatelessWidget {
 
     return Container(
       color: Colors.black,
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
           // horizontal: isMobile ? 10 : 0,
           //  vertical: isMobile ? 15 : 10 * 2.5,
           ),

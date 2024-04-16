@@ -26,14 +26,11 @@ class MyApp extends StatelessWidget {
 
 TextTheme _buildTheme() {
   var baseTheme = GoogleFonts.fahkwangTextTheme();
-
-
   baseTheme.copyWith(
     bodyLarge: const TextStyle(
         fontWeight: FontWeight.w400, fontSize: 10, color: Colors.white),
     headlineLarge: const TextStyle(
         fontWeight: FontWeight.w500, fontSize: 16, color: kColorGold),
   );
-
   return baseTheme;
 }
