@@ -1,146 +1,195 @@
 import 'package:flutter/material.dart';
 import 'package:web/repository/whatsapp_repository.dart';
-import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:web/sections/footer/menu_button.dart';
 import '../../constants.dart';
 
 class FooterSection extends StatelessWidget {
-  const FooterSection({super.key});
+  final ValueChanged<int> onMenuClick;
+  const FooterSection({
+    super.key,
+    required this.onMenuClick,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final responsive = Responsive(context);
-
     return Container(
       color: Colors.black,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 40),
+        child: Column(
           children: [
-            Expanded(
-              child: Image.asset(
-                'assets/images/logologo.png',
-                height: 150,
-                width: 150,
-                fit: BoxFit.fitHeight,
-              ),
-            ),
-            Expanded(
-              child: Column(
-                children: [
-                  const Text(
-                    'Siga nas redes sociais: ',
-                    style: TextStyle(color: kColorGold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: Image.asset(
+                    'assets/images/logologo.png',
+                    height: 120,
+                    width: 120,
+                    fit: BoxFit.fitHeight,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                Expanded(
+                  child: Column(
                     children: [
-                      IconButton(
-                        onPressed: () => openInstagram(),
-                        icon: const FaIcon(
-                          FontAwesomeIcons.instagram,
-                          size: 40,
-                          color: kColorGold,
-                        ),
+                      MenuButton(
+                        text: 'Home',
+                        number: 1,
+                        colors: Colors.white,
+                        onPressed: () => onMenuClick(1),
+                        fontSize: 15,
                       ),
-                      IconButton(
-                        onPressed: () => openFacebook(),
-                        icon: const FaIcon(
-                          FontAwesomeIcons.facebook,
-                          size: 40,
-                          color: kColorGold,
-                        ),
+                      MenuButton(
+                        text: 'Tratamentos',
+                        number: 2,
+                        colors: Colors.white,
+                        onPressed: () => onMenuClick(2),
+                        fontSize: 15,
+                      ),
+                      MenuButton(
+                        text: 'Procedimentos',
+                        number: 3,
+                        colors: Colors.white,
+                        onPressed: () => onMenuClick(3),
+                        fontSize: 15,
+                      ),
+                      MenuButton(
+                        text: 'Dra Raissa',
+                        number: 4,
+                        colors: Colors.white,
+                        onPressed: () => onMenuClick(4),
+                        fontSize: 15,
+                      ),
+                      MenuButton(
+                        text: 'Localização',
+                        number: 5,
+                        colors: Colors.white,
+                        onPressed: () => onMenuClick(5),
+                        fontSize: 15,
                       ),
                     ],
                   ),
-                  const Column(
+                  /*Image.asset(
+                    'assets/images/logologo.png',
+                    height: 150,
+                    width: 150,
+                    fit: BoxFit.fitHeight,
+                  ),*/
+                ),
+                const Expanded(
+                  child: Column(
                     children: [
-                      SizedBox(height: 20),
                       Text(
-                        'Política de Privacidade',
-                        style: TextStyle(color: kColorGold),
+                        'Contato',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                      Text(
+                        '11 987000000',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        'draraissa@gmail.com',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      /*const Column(
+                        children: [
+                          SizedBox(height: 15),
+                          Text(
+                            'Política de Privacidade',
+                            style: TextStyle(color: kColorGold),
+                          ),
+                        ],
+                      )*/
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(45),
+                              color: kColorGold,
+                            ),
+                            child: IconButton(
+                              onPressed: () => openInstagram(),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.instagram,
+                                size: 25,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(45),
+                              color: kColorGold,
+                            ),
+                            child: IconButton(
+                              onPressed: () => openFacebook(),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.facebookF,
+                                size: 23,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(width: 20),
-            const Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    'Links rápidos',
-                    style: TextStyle(color: kColorGold),
-                  ),
-                  Text(
-                    'ooi',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'oooi',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
             const Divider(
               color: kColorGold,
             ),
-            /*Text(
-              '''@ 2024 Copyright Dra. Raissa. Todos os direitos reservados.''',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 12),
+            const SizedBox(
+              height: 10,
             ),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              'Desenvolvido por ...',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 12),
-            )*/
-            /* const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            const Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(
-                  '@ 2024 Copyright Dra. Raissa. Todos os direitos reservados.',
-                  style: TextStyle(color: Colors.white),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Text(
+                        'Política de Privacidade',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      SizedBox(width: 15),
+                      Text(
+                        'Termos de uso',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
                 Text(
-                  'Desenvolvido por ...',
+                  '@ 2024 Copyright Raissa Campos. Todos os direitos reservados.',
+                  textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white),
-                )
+                ),
+                SizedBox(width: 15),
+                Text(
+                  'Desenvolvido por .. ',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
-            ),*/
-            /*responsive.value({
-              Breakpoints.xs: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    '''@ 2024 Copyright Dra. Raissa. Todos os direitos reservados.''',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    'Desenvolvido por ...',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  )
-                ],
-              ),
-            }),*/
+            ),
           ],
         ),
       ),
