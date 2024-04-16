@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:web/components/whatsapp_button.dart';
 import 'package:web/constants.dart';
-import 'package:web/sections/treatments/components/checklist.dart';
-import 'package:web/sections/treatments/components/subtitle.dart';
+import 'package:web/sections/appointments/components/checklist.dart';
+import 'package:web/sections/appointments/components/subtitle.dart';
 import 'package:skynexui_responsive_stylesheet/skynexui_responsive_stylesheet.dart';
 
 class AboutSection extends StatelessWidget {
