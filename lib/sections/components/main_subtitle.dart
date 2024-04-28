@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:skynexui_responsive_stylesheet/breakpoints/breakpoints.dart';
+import 'package:skynexui_responsive_stylesheet/responsive/responsive.dart';
 
 class MainSubtitle extends StatelessWidget {
   final String title;
@@ -15,10 +17,9 @@ class MainSubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-        //final responsive = Responsive(context);
-        //   return responsive.value({
-        /* Breakpoints.xs: Column(
+    final responsive = Responsive(context);
+    return responsive.value({
+      Breakpoints.xs: Column(
         children: [
           Text(
             title,
@@ -39,32 +40,31 @@ class MainSubtitle extends StatelessWidget {
             ),
           ),
         ],
-      ),*/
-        // Breakpoints.md:
-        Column(children: [
-          Flexible(
-            child: Text(
-              title,
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                color: color,
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            subtitle,
+      ),
+      Breakpoints.md: Column(children: [
+        Flexible(
+          child: Text(
+            title,
             textAlign: TextAlign.start,
             style: TextStyle(
               color: color,
-              fontSize: 15,
+              fontSize: 25,
+              fontWeight: FontWeight.w500,
             ),
           ),
-        ]);
+        ),
+        const SizedBox(height: 10),
+        Text(
+          subtitle,
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: color,
+            fontSize: 17,
+          ),
+        ),
+      ])
 
-    //),
-    //  });
+      //),
+    });
   }
 }

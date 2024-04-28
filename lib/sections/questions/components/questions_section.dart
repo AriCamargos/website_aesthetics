@@ -53,7 +53,7 @@ class QuestionsSection extends StatelessWidget {
                   crossAxisCount: 2,
                   mainAxisSpacing: 30.0,
                   crossAxisSpacing: 20.0,
-                  childAspectRatio: 2.5,
+                  childAspectRatio: 2.9,
                 ),
                 itemCount: questions.length,
                 //shrinkWrap: true,

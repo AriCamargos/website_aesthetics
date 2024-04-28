@@ -13,24 +13,40 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
 
     return Container(
       color: const Color(0xFF18191B),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 300),
+        padding: isMobile
+            ? const EdgeInsets.symmetric(vertical: 20, horizontal: 20)
+            : const EdgeInsets.symmetric(vertical: 50, horizontal: 300),
         child: Column(
           children: [
             const SizedBox(height: kDefaultPaddingMd * 2),
             responsive.value({
-              /*Breakpoints.xs: Padding(
+              Breakpoints.xs: Padding(
                 padding: kSizePageXs,
                 child: Column(
                   children: [
-                    Image.asset(
-                      'images/about_rai.jpg',
-                      width: 400,
+                    const Text(
+                      'Dra. Raissa Campos',
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: kColorGold,
+                          fontWeight: FontWeight.w400),
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 20),
+                    Container(
+                      decoration: const BoxDecoration(
+                        boxShadow: [kDefaultShadow],
+                      ),
+                      child: Image.asset(
+                        'images/about_rai.jpg',
+                        width: 400,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
                     const Subtitle(
                       subtitle:
                           'Dra Raissa Campos é cirurgiã dentista especialista em saúde pública e procedimentos estéticos. Aplicando as mais modernas tecnologias em suas técnicas faciais, além de todo o conforto e atendimento individualizado para as suas necessidades.',
@@ -43,7 +59,7 @@ class AboutSection extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),*/
+              ),
               Breakpoints.md: Row(
                 children: [
                   const Expanded(
@@ -53,9 +69,10 @@ class AboutSection extends StatelessWidget {
                         Text(
                           'Raissa Campos',
                           style: TextStyle(
-                              fontSize: 45,
-                              color: kColorGold,
-                              fontWeight: FontWeight.w400),
+                            fontSize: 45,
+                            color: kColorGold,
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                         SizedBox(height: 15),
                         Subtitle(

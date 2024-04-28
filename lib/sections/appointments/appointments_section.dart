@@ -11,33 +11,42 @@ class AppointmentSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
 
     return Container(
       color: const Color(0xFF18191B),
       constraints: const BoxConstraints(maxWidth: double.maxFinite),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 300),
+        padding: isMobile
+            ? const EdgeInsets.symmetric(vertical: 20, horizontal: 20)
+            : const EdgeInsets.symmetric(vertical: 50, horizontal: 300),
         child: Column(
           children: [
-            const SizedBox(height: kDefaultPaddingMd * 2),
+            const SizedBox(height: kDefaultPaddingMd * 2.5),
             responsive.value({
-              /*Breakpoints.xs: Padding(
+              Breakpoints.xs: Padding(
                 padding: kSizePageXs,
                 child: Column(
                   children: [
-                    Text('Como funciona a '),
-                    Text('Primeira Consulta'),
+                    const MainTitle(
+                      title: 'Primeira Consulta',
+                      subtitle: 'Como funciona?',
+                    ),
                     const CheckList(),
-                    const SizedBox(height: 12),
-                    Image.asset(
-                      '/images/woman_seat.jpg',
-                      alignment: Alignment.centerRight,
-                      height: 500,
-                      fit: BoxFit.cover,
+                    const SizedBox(height: 15),
+                    Container(
+                      decoration:
+                          const BoxDecoration(boxShadow: [kDefaultShadow]),
+                      child: Image.asset(
+                        '/images/rai_photo.jpg',
+                        alignment: Alignment.centerRight,
+                        height: 600,
+                        //fit: BoxFit.cover,
+                      ),
                     ),
                   ],
                 ),
-              ),*/
+              ),
               Breakpoints.md: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -57,23 +66,10 @@ class AppointmentSection extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        /*Text(
-                          'Como funcionam os tratamentos?',
-                          style: Theme.of(context).textTheme.displaySmall,
-                          textAlign: TextAlign.left,
-                        ),*/
                         MainTitle(
                           title: 'Primeira Consulta',
                           subtitle: 'Como funciona?',
                         ),
-                        /*Text(
-                          'Como funciona a ',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                        Text(
-                          'Primeira Consulta',
-                          style: TextStyle(fontSize: 20),
-                        ),*/
                         SizedBox(height: 15),
                         CheckList(),
                       ],
