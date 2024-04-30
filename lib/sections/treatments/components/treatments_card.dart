@@ -6,16 +6,21 @@ class TreatmentsCard extends StatelessWidget {
   final List<String> listOptions;
   final IconData? icons;
   const TreatmentsCard({
-    super.key, required this.title, required this.listOptions, required this.icons,
+    super.key,
+    required this.title,
+    required this.listOptions,
+    required this.icons,
   });
 
-  
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
+
     return Container(
+      width: isMobile ? 330 : 350,
       color: const Color(0xFF18191B),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 90),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +35,7 @@ class TreatmentsCard extends StatelessWidget {
             for (var item in listOptions)
               Row(
                 children: [
-                  Icon(icons  , color: kColorGold),
+                  Icon(icons, color: kColorGold),
                   const SizedBox(width: 12),
                   Text(
                     item,

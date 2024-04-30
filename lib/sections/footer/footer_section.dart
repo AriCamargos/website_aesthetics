@@ -19,7 +19,7 @@ class FooterSection extends StatelessWidget {
 
     return responsive.value({
       Breakpoints.xs: Container(
-        color: const Color(0xFF18191B),
+        color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
           child: Column(
@@ -167,9 +167,9 @@ class FooterSection extends StatelessWidget {
         ),
       ),
       Breakpoints.md: Container(
-        color: const Color(0xFF18191B),
+        color: Colors.black,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 40),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           child: Column(
             children: [
               Row(

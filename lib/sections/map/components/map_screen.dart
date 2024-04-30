@@ -11,20 +11,17 @@ class MapScreen extends StatelessWidget {
     double lng = -46.8178584;
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
 
-    return
-        //isMobile
-        //     ?
-        Padding(
+    return Padding(
       padding: const EdgeInsets.all(kDefaultPaddingXs),
       child: Container(
         decoration: BoxDecoration(boxShadow: [kDefaultShadowMap]),
         child: SizedBox(
-          width: 600,
-          height: 300,
+          width: isMobile ? 500 : 800,
+          height: isMobile ? 300 : 400,
           child: GoogleMap(
             initialCameraPosition: CameraPosition(
               target: LatLng(lat, lng),
-              zoom: 11,
+              zoom: 12,
             ),
             markers: {
               Marker(
@@ -36,26 +33,5 @@ class MapScreen extends StatelessWidget {
         ),
       ),
     );
-    /*  : Container(
-            decoration: BoxDecoration(boxShadow: [kDefaultShadowMap]),
-            child: SizedBox(
-              width: 700,
-              height: 400,
-              child: GoogleMap(
-
-                initialCameraPosition: CameraPosition(
-                  target: LatLng(lat, lng),
-                  zoom: 11,
-                ),
-               
-                markers: {
-                  Marker(
-                    markerId: const MarkerId('São Paulo'),
-                    position: LatLng(lat, lng),
-                  ),
-                },
-              ),
-            ),
-          );*/
   }
 }

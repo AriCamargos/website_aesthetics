@@ -11,7 +11,7 @@ class MapSection extends StatelessWidget {
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     return Container(
       color: const Color(0xFF18191B),
-      constraints: const BoxConstraints(maxWidth: 1110),
+      constraints: const BoxConstraints(maxWidth: double.maxFinite),
       child: Padding(
         padding: isMobile
             ? const EdgeInsets.symmetric(vertical: 20, horizontal: 20)

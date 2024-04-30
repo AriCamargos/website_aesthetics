@@ -11,97 +11,74 @@ class ProcedureSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
+
     final response = Responsive(context);
     return Container(
       color: const Color(0xFF18191B),
       constraints: const BoxConstraints(maxWidth: double.maxFinite),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 300),
+        padding: !isMobile
+            ? const EdgeInsets.symmetric(vertical: 30, horizontal: 50)
+            : EdgeInsets.zero,
         child: Column(
           children: [
             const MainTitle(
-              title: 'Benefícios dos tratamentos',
-              subtitle: '''Resgate sua jovialidade com '''
-                  '''uma aparência rejuvenescida que reflete sua verdadeira essência''',
-            ),
+                title: 'Resultado dos Tratamentos',
+                subtitle:
+                    '''Galeria com antes e depois dos nossos tratamentos '''),
             const SizedBox(height: 20),
             response.value({
-              /* Breakpoints.xs: Column(
+              Breakpoints.xs: Column(
                 children: services
                     .map(
                       (service) => Column(
                         children: [
-                          Container(
-                            height: 95,
-                            width: 95,
-                            decoration: BoxDecoration(
-                              color: kColorGold,
-                              shape: BoxShape.circle,
-                              boxShadow: [
-                                BoxShadow(
-                                  offset: const Offset(0, 20),
-                                  blurRadius: 100,
-                                  color: Colors.black.withOpacity(0.1),
-                                ),
-                              ],
-                            ),
+                          SizedBox(
+                            height: 200,
+                            width: 200,
                             child: Image.asset(
                               service.image,
                               filterQuality: FilterQuality.none,
-                              height: 100,
-                              width: 100,
                             ),
                           ),
-                          const SizedBox(height: 15),
+                          const SizedBox(height: 11),
                           Text(
                             service.title,
                             textAlign: TextAlign.center,
                             style: const TextStyle(
-                              fontSize: 23,
+                              fontSize: 15,
+                              color: Colors.white,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Text(
-                            service.subtitle,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                fontSize: 17, fontWeight: FontWeight.w500),
-                          ),
                           const SizedBox(height: 20),
                         ],
                       ),
                     )
                     .toList(),
-              ),*/
-              /* Breakpoints.md: Wrap(
-                alignment: WrapAlignment.spaceBetween,
-                spacing: 20,
-                runSpacing: 20,
-                children: List.generate(
-                  services.length,
-                  (index) => BenefitsComponent(index: index),
-                ),
-              ),*/
-              Breakpoints.lg: SizedBox(
-                height: 600,
+              ),
+              Breakpoints.md: SizedBox(
+                height: 750,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
-                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 0,
+                    crossAxisSpacing: 0,
+                    childAspectRatio: 1.5,
                   ),
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: services.length,
                   itemBuilder: (context, index) => ProcedureComponent(
                     index: index,
                     title: services[index].title,
-                    subtitle: services[index].subtitle,
                     image: services[index].image,
                   ),
                 ),
               ),
             }),
-            const SizedBox(height: kDefaultPaddingMd * 2),
+            const SizedBox(height: kDefaultPaddingMd * 1.5),
             const WhatsappButtonSoft(),
           ],
         ),

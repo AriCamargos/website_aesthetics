@@ -13,7 +13,6 @@ class MainTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     final responsive = Responsive(context);
     var theme = Theme.of(context).textTheme;
 
