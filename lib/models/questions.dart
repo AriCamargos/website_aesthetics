@@ -14,7 +14,7 @@ List<Questions> questions = [
         'Com certeza! Porém, é importante escolher profissionais capacitados. Eventuais riscos são baixos e passageiros, como pequenos hematomas.',
   ),
   Questions(
-    title: 'Quanto tempo leva para ver os resultados?',
+    title: 'Quanto tempo leva para ver os resultados dos tratamentos estéticos?',
     subtitle:
         'O tempo para ver os resultados depende do tratamento. Alguns mostram efeitos imediatos, enquanto outros podem levar algumas semanas.',
   ),
