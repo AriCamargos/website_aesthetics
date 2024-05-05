@@ -33,6 +33,8 @@ migrate_working_dir/
 /build/
 /repository/whatsapp_repository.dart
 /web/index.html
+/windows/index.html
+
 # Symbolication related
 app.*.symbols
 
