@@ -62,31 +62,37 @@ class TreatmentsSection extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TreatmentsCard(
-                        title: 'Preenchimento',
-                        listOptions:
-                            treatmentsList.map((item) => item.item).toList(),
-                        icons: Icons.stars_rounded,
+                      Expanded(
+                        child: TreatmentsCard(
+                          title: 'Preenchimento',
+                          listOptions:
+                              treatmentsList.map((item) => item.item).toList(),
+                          icons: Icons.stars_rounded,
+                        ),
                       ),
                       const SizedBox(width: 15.0),
-                      TreatmentsCard(
-                        title: 'Bioestimuladores',
-                        listOptions:
-                            bioestimulatorsList.map((e) => e.item).toList(),
-                        icons: Icons.bolt_outlined,
+                      Expanded(
+                        child: TreatmentsCard(
+                          title: 'Bioestimuladores',
+                          listOptions:
+                              bioestimulatorsList.map((e) => e.item).toList(),
+                          icons: Icons.bolt_outlined,
+                        ),
                       ),
                       const SizedBox(width: 15.0),
-                      TreatmentsCard(
-                        title: 'Botox',
-                        listOptions: fillerList.map((e) => e.item).toList(),
-                        icons: Icons.favorite_outlined,
+                      Expanded(
+                        child: TreatmentsCard(
+                          title: 'Botox',
+                          listOptions: fillerList.map((e) => e.item).toList(),
+                          icons: Icons.favorite_outlined,
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
-
             }),
           ],
         ),
