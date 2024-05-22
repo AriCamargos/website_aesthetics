@@ -17,16 +17,13 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: TextButton(
-        onPressed: () => onPressed(),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: fontSize,
-            color: colors,
-          ),
+    return TextButton(
+      onPressed: () => onPressed(),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: fontSize,
+          color: colors,
         ),
       ),
     );
