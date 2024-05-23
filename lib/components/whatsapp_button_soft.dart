@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:web/repository/whatsapp_repository.dart';
+import 'package:web/repository/api_repository.dart';
 import '../constants.dart';
 
 class WhatsappButtonSoft extends StatelessWidget {

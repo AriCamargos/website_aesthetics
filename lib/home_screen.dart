@@ -12,7 +12,7 @@ import 'package:web/sections/footer/footer_section.dart';
 import 'package:web/sections/top_section/menu_drawer.dart';
 import 'package:web/sections/treatments/treatments_section.dart';
 import 'package:web/sections/top_section/top_section.dart';
-import 'package:web/repository/whatsapp_repository.dart';
+import 'package:web/repository/api_repository.dart';
 
 import 'home_screen_state.dart';
 

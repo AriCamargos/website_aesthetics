@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skynexui_responsive_stylesheet/breakpoints/breakpoints.dart';
 import 'package:skynexui_responsive_stylesheet/responsive/responsive.dart';
-import 'package:web/repository/whatsapp_repository.dart';
+import 'package:web/repository/api_repository.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:web/sections/footer/menu_button.dart';
 import '../../constants.dart';
