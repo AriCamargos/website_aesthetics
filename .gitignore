@@ -31,9 +31,10 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-/repository/whatsapp_repository.dart
-/web/index.html
+lib/repository/api_repository.dart
 /windows/index.html
+/web/index.html
+/windows/index2.html
 
 # Symbolication related
 app.*.symbols
