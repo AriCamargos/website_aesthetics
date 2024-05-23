@@ -10,7 +10,7 @@ const kDefaultTextXs = 18.0;
 const kDefaultTextMd = 17.0;
 
 const kSizedWidth = SizedBox(width: 25);
-const kSizePageXs = EdgeInsets.all(10);
+const kSizePageXs = EdgeInsets.all(25);
 const double kMdBreakpoint =
     768; // Valor em pixels que representa a largura da tela para dispositivos médios
 const double kXsBreakpoint =

@@ -38,40 +38,13 @@ class FooterSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       MenuButton(
-                        text: 'Home',
+                        text: 'Voltar ao topo',
                         number: 1,
                         colors: Colors.white,
                         onPressed: () => onMenuClick(1),
                         fontSize: 15,
                       ),
-                      MenuButton(
-                        text: 'Tratamentos',
-                        number: 2,
-                        colors: Colors.white,
-                        onPressed: () => onMenuClick(2),
-                        fontSize: 15,
-                      ),
-                      MenuButton(
-                        text: 'Procedimentos',
-                        number: 3,
-                        colors: Colors.white,
-                        onPressed: () => onMenuClick(3),
-                        fontSize: 15,
-                      ),
-                      MenuButton(
-                        text: 'Dra Raissa',
-                        number: 4,
-                        colors: Colors.white,
-                        onPressed: () => onMenuClick(4),
-                        fontSize: 15,
-                      ),
-                      MenuButton(
-                        text: 'Localização',
-                        number: 5,
-                        colors: Colors.white,
-                        onPressed: () => onMenuClick(5),
-                        fontSize: 15,
-                      ),
+                     
                     ],
                   ),
                   const Padding(
@@ -193,40 +166,13 @@ class FooterSection extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                         MenuButton(
-                          text: 'Home',
+                          text: 'Voltar ao topo',
                           number: 1,
                           colors: Colors.white,
                           onPressed: () => onMenuClick(1),
                           fontSize: 15,
                         ),
-                        MenuButton(
-                          text: 'Tratamentos',
-                          number: 2,
-                          colors: Colors.white,
-                          onPressed: () => onMenuClick(2),
-                          fontSize: 15,
-                        ),
-                        MenuButton(
-                          text: 'Procedimentos',
-                          number: 3,
-                          colors: Colors.white,
-                          onPressed: () => onMenuClick(3),
-                          fontSize: 15,
-                        ),
-                        MenuButton(
-                          text: 'Dra Raissa',
-                          number: 4,
-                          colors: Colors.white,
-                          onPressed: () => onMenuClick(4),
-                          fontSize: 15,
-                        ),
-                        MenuButton(
-                          text: 'Localização',
-                          number: 5,
-                          colors: Colors.white,
-                          onPressed: () => onMenuClick(5),
-                          fontSize: 15,
-                        ),
+                        
                       ],
                     ),
                   ),
@@ -239,11 +185,11 @@ class FooterSection extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                         Text(
-                          '11 987000000',
+                          '   11 987000000',
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          'draraissa@gmail.com',
+                          '   draraissa@gmail.com',
                           style: TextStyle(color: Colors.white),
                         ),
                         /*const Column(

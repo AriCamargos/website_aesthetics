@@ -26,17 +26,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int selectedSectionIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final state = MenuClickState();
-
+    final MenuClickState state = MenuClickState();
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
-    
+
     return Scaffold(
       appBar: !isMobile
           ? PreferredSize(
-              preferredSize: const Size(double.infinity, 600),
-              child: TopSection(onMenuClick: state.onMenuClick),
+              preferredSize: const Size.fromHeight(0),
+              child: Container(),
             )
           : AppBar(
               iconTheme: const IconThemeData(color: kColorGold),
@@ -65,16 +65,20 @@ class _HomeScreenState extends State<HomeScreen> {
           controller: state.scrollController,
           child: Column(
             children: [
+              if (!isMobile)
+                TopSection(
+                  onMenuClick: (index) => state.onMenuClick(index),
+                ),
               //if (!isMobile) WebCarousel(pathToImages: bannerList),
-              const SizedBox(height: kDefaultPaddingMd * 2),
-              AppointmentSection(key: state.keySection1),
-              TreatmentsSection(key: state.keySection2),
-              ProcedureSection(key: state.keySection3),
+              //const SizedBox(height: kDefaultPaddingMd * 2),
+              AppointmentSection(key: state.sectionKeys[1]),
+              TreatmentsSection(key: state.sectionKeys[2]),
+              ProcedureSection(key: state.sectionKeys[3]),
               if (!isMobile) const FeedbackSection(),
-              AboutSection(key: state.keySection4),
+              AboutSection(key: state.sectionKeys[4]),
               if (!isMobile) QuestionsSection(questions: questions),
-              MapSection(key: state.keySection5),
-              FooterSection(onMenuClick: state.onMenuClick),
+              MapSection(key: state.sectionKeys[5]),
+              FooterSection(onMenuClick:(index) => state.onMenuClick(index)),
             ],
           ),
         ),

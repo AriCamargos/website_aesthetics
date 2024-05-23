@@ -64,8 +64,6 @@ class ProcedureSection extends StatelessWidget {
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
-                    mainAxisSpacing: 0,
-                    crossAxisSpacing: 0,
                     childAspectRatio: 1.5,
                   ),
                   physics: const NeverScrollableScrollPhysics(),

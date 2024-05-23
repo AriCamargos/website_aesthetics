@@ -12,16 +12,16 @@ class Feedback {
 }
 
 List<Feedback> feedback = [
-  Feedback(
+  const Feedback(
     id: 1,
     name: 'Antonela Miranda',
-    review: review,
+    review: 'Meu rosto está radiante após o tratamento. Muito obrigada pela experiência!',
     userPic: 'assets/images/people.png',
   ),
-  Feedback(
+  const Feedback(
     id: 2,
-    name: 'Antonela Miranda',
-    review: review,
+    name: 'Marta Maria',
+    review: 'Amei meu preenchimento labial! A Rai foi impecável no meu resultado!',
     userPic: 'assets/images/people.png',
   ),
   Feedback(
