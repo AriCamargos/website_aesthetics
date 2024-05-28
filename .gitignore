@@ -35,6 +35,8 @@ lib/repository/api_repository.dart
 /windows/index.html
 /web/index.html
 /windows/index2.html
+/firebase.json
+/.firebase/hosting.YnVpbGQvd2Vi.cache
 
 # Symbolication related
 app.*.symbols
