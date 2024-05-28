@@ -45,7 +45,7 @@ class _TopSectionState extends State<TopSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            'images/logologo-simbol.png',
+            'assets/images/logologo-simbol.png',
             fit: BoxFit.cover,
             width: 65,
             height: 65,

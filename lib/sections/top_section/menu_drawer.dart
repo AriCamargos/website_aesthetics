@@ -34,7 +34,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
-                'images/logologo-simbol.png',
+                'assets/images/logologo-simbol.png',
                 fit: BoxFit.cover,
                 width: 60,
                 height: 60,

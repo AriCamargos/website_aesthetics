@@ -16,33 +16,30 @@ List<Feedback> feedback = [
     id: 1,
     name: 'Antonela Miranda',
     review: 'Meu rosto está radiante após o tratamento. Muito obrigada pela experiência!',
-    userPic: 'assets/images/people.png',
+    userPic: 'assets/images/woman.jpg',
   ),
   const Feedback(
     id: 2,
     name: 'Marta Maria',
     review: 'Amei meu preenchimento labial! A Rai foi impecável no meu resultado!',
-    userPic: 'assets/images/people.png',
+    userPic: 'assets/images/woman1.jpg',
   ),
-  Feedback(
+  const Feedback(
     id: 3,
-    name: 'Antonela Miranda',
-    review: review,
-    userPic: 'assets/images/people.png',
+    name: 'Julia Almeida',
+    review: 'Me senti muito bem cuidada desde o primeiro momento. Atendimento incrível!',
+    userPic: 'assets/images/woman3.jpg',
   ),
-  Feedback(
-    id: 3,
-    name: 'Antonela Miranda',
-    review: review,
-    userPic: 'assets/images/people.png',
+  const Feedback(
+    id: 4,
+    name: 'Giovanna Figueira',
+    review: 'Fiquei muito satisfeita com o resultado do meu procedimento, farei mais vezes!',
+    userPic: 'assets/images/woman2.jpg',
   ),
-  Feedback(
-    id: 3,
-    name: 'Antonela Miranda',
-    review: review,
+  const Feedback(
+    id: 5,
+    name: 'Henrique Santos',
+    review: 'Tratamentos são realmente muito eficazes, não troco!',
     userPic: 'assets/images/people.png',
   ),
 ];
-
-String review =
-    '''Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua enim ad minim veniam.''';

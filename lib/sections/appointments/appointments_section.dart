@@ -38,7 +38,7 @@ class AppointmentSection extends StatelessWidget {
                       decoration:
                           const BoxDecoration(boxShadow: [kDefaultShadow]),
                       child: Image.asset(
-                        '/images/rai_photo.jpg',
+                        'assets/images/rai_photo.jpg',
                         alignment: Alignment.centerRight,
                         height: 600,
                         //fit: BoxFit.cover,
@@ -54,7 +54,7 @@ class AppointmentSection extends StatelessWidget {
                     decoration:
                         const BoxDecoration(boxShadow: [kDefaultShadow]),
                     child: Image.asset(
-                      '/images/rai_photo.jpg',
+                      'assets/images/rai_photo.jpg',
                       alignment: Alignment.centerRight,
                       height: 700,
                       //fit: BoxFit.cover,

@@ -46,6 +46,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
                   border: Border.all(color: Colors.white, width: 8),
                   image: DecorationImage(
                     image: AssetImage(feedback[widget.index].userPic!),
+                    fit: BoxFit.fitWidth
                   ),
                 ),
               ),
