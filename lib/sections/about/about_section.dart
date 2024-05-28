@@ -42,7 +42,7 @@ class AboutSection extends StatelessWidget {
                         boxShadow: [kDefaultShadow],
                       ),
                       child: Image.asset(
-                        'images/about_rai.jpg',
+                        'assets/images/about_rai.jpg',
                         width: 400,
                       ),
                     ),
@@ -96,7 +96,7 @@ class AboutSection extends StatelessWidget {
                             boxShadow: [kDefaultShadow],
                           ),
                           child: Image.asset(
-                            'images/about_rai.jpg',
+                            'assets/images/about_rai.jpg',
                             alignment: Alignment.centerRight,
                             height: 700,
                           ),
