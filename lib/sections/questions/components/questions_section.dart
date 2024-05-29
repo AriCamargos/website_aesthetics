@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:web/constants.dart';
 import 'package:web/models/questions.dart';
 import 'package:web/sections/questions/questions_card.dart';
 import '../../components/main_title.dart';
@@ -13,7 +12,7 @@ class QuestionsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
+    //final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
 
     return Container(
       color: Colors.black,
