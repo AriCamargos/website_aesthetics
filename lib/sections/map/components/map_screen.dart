@@ -7,8 +7,8 @@ class MapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double lat = -23.5499461;
-    double lng = -46.8178584;
+    double lat = -23.6096339;
+    double lng = -46.7695725;
     final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
 
     return Padding(

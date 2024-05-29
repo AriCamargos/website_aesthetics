@@ -21,7 +21,7 @@ class MapSection extends StatelessWidget {
             MainTitle(
               title: 'Onde estamos'.toUpperCase(),
               subtitle:
-                  'Av Benedito Alves Turíbio 1838 - Padroeira II - Osasco - São Paulo',
+                  'Centro Empresarial Vida Nova \n Av Via Nova 28 - Jd Maria Rosa - Taboão da Serra - São Paulo',
             ),
             const SizedBox(height: 10),
             const Column(

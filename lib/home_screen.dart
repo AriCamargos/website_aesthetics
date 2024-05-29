@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:web/constants.dart';
 import 'package:web/models/questions.dart';
@@ -41,9 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
           : AppBar(
               iconTheme: const IconThemeData(color: kColorGold),
               backgroundColor: Colors.white,
-              elevation: 0,
+              elevation: 3,
               centerTitle: true,
-              title: const Text('Dra Raissa Campos'),
+              title: const Text(
+                'Dra Raissa Campos',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
       drawer: isMobile
           ? MenuDrawer(
@@ -74,11 +80,11 @@ class _HomeScreenState extends State<HomeScreen> {
               AppointmentSection(key: state.sectionKeys[1]),
               TreatmentsSection(key: state.sectionKeys[2]),
               ProcedureSection(key: state.sectionKeys[3]),
-              if (!isMobile) const FeedbackSection(),
+              const FeedbackSection(),
               AboutSection(key: state.sectionKeys[4]),
               if (!isMobile) QuestionsSection(questions: questions),
               MapSection(key: state.sectionKeys[5]),
-              FooterSection(onMenuClick:(index) => state.onMenuClick(index)),
+              FooterSection(onMenuClick: (index) => state.onMenuClick(index)),
             ],
           ),
         ),
