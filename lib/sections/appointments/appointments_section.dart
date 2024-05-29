@@ -36,10 +36,9 @@ class AppointmentSection extends StatelessWidget {
                     const SizedBox(height: 15),
                     Container(
                       decoration:
-                          const BoxDecoration(boxShadow: [kDefaultShadow]),
+                          const BoxDecoration(boxShadow: [kDefaultShadowMobile]),
                       child: Image.asset(
                         'assets/images/rai_photo.jpg',
-                        height: 500,
                         alignment: Alignment.centerRight,
                         //fit: BoxFit.cover,
                       ),

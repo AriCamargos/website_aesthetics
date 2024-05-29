@@ -33,7 +33,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         decoration: BoxDecoration(
           color: const Color(0xFF18191B),
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [if (isHover) kDefaultShadow],
+          boxShadow: [if (isHover || isMobile ) kDefaultShadow],
         ),
         child: Column(
           children: [

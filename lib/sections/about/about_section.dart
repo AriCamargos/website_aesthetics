@@ -39,7 +39,7 @@ class AboutSection extends StatelessWidget {
                     const SizedBox(height: 20),
                     Container(
                       decoration: const BoxDecoration(
-                        boxShadow: [kDefaultShadow],
+                        boxShadow: [kDefaultShadowMobile],
                       ),
                       child: Image.asset(
                         'assets/images/about_rai.jpg',
