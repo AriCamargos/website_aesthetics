@@ -61,7 +61,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               },
               indexHovering: 0,
             ),
-            TopComponent(
+            /* TopComponent(
               title: 'Procedimentos',
               isHovering: _isHovering,
               onPressed: () {
@@ -78,6 +78,9 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 widget.onMenuClick(4);
               },
               indexHovering: 0,
+            ),*/
+            const SizedBox(
+              height: 50
             ),
             const Center(
               child: WhatsappButton(),

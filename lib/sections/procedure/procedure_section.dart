@@ -23,6 +23,7 @@ class ProcedureSection extends StatelessWidget {
             : EdgeInsets.zero,
         child: Column(
           children: [
+            const SizedBox(height: 30),
             const MainTitle(
                 title: 'Resultado dos Tratamentos',
                 subtitle:
@@ -78,6 +79,7 @@ class ProcedureSection extends StatelessWidget {
             }),
             const SizedBox(height: kDefaultPaddingMd * 1.5),
             const WhatsappButtonSoft(),
+            const SizedBox(height: 30),
           ],
         ),
       ),

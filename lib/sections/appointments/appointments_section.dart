@@ -22,7 +22,7 @@ class AppointmentSection extends StatelessWidget {
             : const EdgeInsets.symmetric(vertical: 50, horizontal: 300),
         child: Column(
           children: [
-            const SizedBox(height: kDefaultPaddingMd * 2.5),
+            const SizedBox(height: kDefaultPaddingMd * 2),
             responsive.value({
               Breakpoints.xs: Padding(
                 padding: kSizePageXs,
@@ -39,8 +39,8 @@ class AppointmentSection extends StatelessWidget {
                           const BoxDecoration(boxShadow: [kDefaultShadow]),
                       child: Image.asset(
                         'assets/images/rai_photo.jpg',
+                        height: 500,
                         alignment: Alignment.centerRight,
-                        height: 600,
                         //fit: BoxFit.cover,
                       ),
                     ),

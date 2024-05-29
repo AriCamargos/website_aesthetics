@@ -17,8 +17,10 @@ class FeedbackCard extends StatefulWidget {
 class _FeedbackCardState extends State<FeedbackCard> {
   Duration duration = const Duration(milliseconds: 200);
   bool isHover = false;
+
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     return MouseRegion(
       onEnter: (event) => _handerHover(true),
       onExit: (event) => _handerHover(false),
@@ -26,8 +28,8 @@ class _FeedbackCardState extends State<FeedbackCard> {
         duration: duration,
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddingMd),
         //tamanho de dentro do card
-        height: 330,
-        width: 300,
+        height: isMobile ? 280 : 330,
+        width: isMobile ? 220 : 300,
         decoration: BoxDecoration(
           color: const Color(0xFF18191B),
           borderRadius: BorderRadius.circular(10),
@@ -46,7 +48,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
                   border: Border.all(color: Colors.white, width: 8),
                   image: DecorationImage(
                     image: AssetImage(feedback[widget.index].userPic!),
-                    fit: BoxFit.fitWidth
+                    fit: BoxFit.fitWidth,
                   ),
                 ),
               ),
@@ -69,9 +71,10 @@ class _FeedbackCardState extends State<FeedbackCard> {
             const SizedBox(height: 15),
             Text(
               feedback[widget.index].review!,
-              style: const TextStyle(
+              textAlign: TextAlign.center,
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: isMobile ? 16.0 : 18.0,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
                 height: 1.5,
@@ -82,6 +85,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
             ),
             Text(
               feedback[widget.index].name,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,

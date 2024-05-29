@@ -18,6 +18,7 @@ class _FeedbackSectionState extends State<FeedbackSection> {
   bool _showCards = true;
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < kMdBreakpoint;
     final response = Responsive(context);
 
     return response.value({
@@ -38,12 +39,15 @@ class _FeedbackSectionState extends State<FeedbackSection> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: IconButton(
                       onPressed: () {
                         _scrollController.animateTo(
-                          _scrollController.offset -
-                              MediaQuery.of(context).size.width * 0.75,
+                          isMobile
+                              ? _scrollController.offset -
+                                  MediaQuery.of(context).size.width * 0.30
+                              : _scrollController.offset -
+                                  MediaQuery.of(context).size.width * 0.75,
                           duration: const Duration(milliseconds: 500),
                           curve: Curves.easeOut,
                         );
@@ -88,8 +92,11 @@ class _FeedbackSectionState extends State<FeedbackSection> {
                       ),
                       onPressed: () {
                         _scrollController.animateTo(
-                          _scrollController.offset +
-                              MediaQuery.of(context).size.width * 0.75,
+                          isMobile
+                              ? _scrollController.offset +
+                                  MediaQuery.of(context).size.width * 0.30
+                              : _scrollController.offset +
+                                  MediaQuery.of(context).size.width * 0.75,
                           curve: Curves.easeOut,
                           duration: const Duration(milliseconds: 500),
                         );

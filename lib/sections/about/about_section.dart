@@ -23,7 +23,7 @@ class AboutSection extends StatelessWidget {
             : const EdgeInsets.symmetric(vertical: 50, horizontal: 300),
         child: Column(
           children: [
-            const SizedBox(height: kDefaultPaddingMd * 2),
+            const SizedBox(height: 30),
             responsive.value({
               Breakpoints.xs: Padding(
                 padding: kSizePageXs,

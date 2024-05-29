@@ -44,7 +44,6 @@ class FooterSection extends StatelessWidget {
                         onPressed: () => onMenuClick(1),
                         fontSize: 15,
                       ),
-                     
                     ],
                   ),
                   const Padding(
@@ -57,11 +56,11 @@ class FooterSection extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                         Text(
-                          '11 987000000',
+                          ' 11 99496-4414',
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          'draraissa@gmail.com',
+                          'draraissacampos@gmail.com',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
@@ -129,7 +128,10 @@ class FooterSection extends StatelessWidget {
                       Text(
                         'Desenvolvido por AriCamargos ',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
                       ),
                     ],
                   ),
@@ -172,7 +174,6 @@ class FooterSection extends StatelessWidget {
                           onPressed: () => onMenuClick(1),
                           fontSize: 15,
                         ),
-                        
                       ],
                     ),
                   ),
@@ -185,11 +186,11 @@ class FooterSection extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                         Text(
-                          '   11 987000000',
+                          '  11 99496-4414',
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          '   draraissa@gmail.com',
+                          '   draraissacampos@gmail.com',
                           style: TextStyle(color: Colors.white),
                         ),
                         /*const Column(
@@ -267,12 +268,8 @@ class FooterSection extends StatelessWidget {
                   ),
                 ],
               ),
-              const Divider(
-                color: kColorGold,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
+              const Divider(color: kColorGold),
+              const SizedBox(height: 10),
               const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -284,7 +281,7 @@ class FooterSection extends StatelessWidget {
                   ),
                   SizedBox(width: 15),
                   Text(
-                    'Desenvolvido por .. ',
+                    'Desenvolvido por AriCamargos',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),

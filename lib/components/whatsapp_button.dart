@@ -26,8 +26,8 @@ class WhatsappButton extends StatelessWidget {
       ),
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.symmetric(
-          vertical: isMobile ? kDefaultPaddingXs : kDefaultPaddingMd,
-          horizontal: isMobile ? kDefaultPaddingXs : kDefaultPaddingMd * 2.5,
+          vertical: isMobile ? 12 : kDefaultPaddingMd,
+          horizontal: isMobile ? 13 : kDefaultPaddingMd * 2.5,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
