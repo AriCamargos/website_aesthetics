@@ -29,17 +29,17 @@ List<Service> services = [
   ),
   Service(
     id: 4,
-    title: 'Contorno facial definido',
+    title: 'Previne rugas',
     image: "assets/images/image4.jpeg",
   ),
   Service(
     id: 5,
-    title: "Pele renovada radiante",
+    title: "Lábios mais radiantes",
     image: "assets/images/image5.jpeg",
   ),
   Service(
     id: 6,
-    title: "Dê adeus à flacidez",
+    title: "Suaviza linhas de expressão ",
     image: "assets/images/image6.jpeg",
   ),
 ];

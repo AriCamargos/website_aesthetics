@@ -23,6 +23,13 @@ const kDefaultShadow = BoxShadow(
   color: kColorGold,
 );
 
+const kDefaultShadowMobile = BoxShadow(
+  offset: Offset(4, 4),
+  blurRadius: 25,
+  blurStyle: BlurStyle.normal,
+  color: kColorGold,
+);
+
 final kDefaultShadowMap = BoxShadow(
   offset: const Offset(5, 5),
   blurRadius: 5,
