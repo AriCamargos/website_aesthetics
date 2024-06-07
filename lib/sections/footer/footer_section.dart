@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:skynexui_responsive_stylesheet/breakpoints/breakpoints.dart';
 import 'package:skynexui_responsive_stylesheet/responsive/responsive.dart';
@@ -66,21 +67,22 @@ class FooterSection extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Política de privacidade',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        SizedBox(width: 15),
-                        Text(
-                          'Termos de uso',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Política de privacidade',
+                            style: const TextStyle(color: Colors.white),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                Navigator.popAndPushNamed(
+                                    context, '/privacyPolicy');
+                              },
+                          ),
                         ),
                       ],
                     ),
