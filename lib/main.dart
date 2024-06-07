@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web/constants.dart';
 import 'package:web/home_screen.dart';
+import 'package:web/sections/footer/components/privacy_policy_component.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,10 @@ class MyApp extends StatelessWidget {
         textTheme: _buildTheme(),
       ),
       home: const HomeScreen(),
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/privacyPolicy':(context) => const PrivacyPolicyPage(),
+      },
     );
   }
 }
